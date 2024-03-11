@@ -1,0 +1,260 @@
+:root{
+    --whitesmoke:whitesmoke;
+    --white:white;
+    --black:black;
+    --yellow:#FFC54D;
+    --green:#53BF9D;
+    --red:crimson;
+    --gradiant:linear-gradient(to right,rgb(9, 9, 9),rgb(53, 51, 51));
+}
+html{
+    /*scroll the window smoothly to bottom*/
+    scroll-behavior: smooth;
+}
+body{
+    
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "Open sans", sans-serif;
+    color: var(--black);
+    background:var(--whitesmoke);
+    overflow-x:hidden ;
+}
+.logo{
+    color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bolder;
+    background: var(--gradiant);
+}
+#res{
+    text-align: right;
+    font-size: 25px;
+    flex:1;
+}
+#companyname{
+    flex:1;
+}
+.landing nav a{
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px;
+    font-size: 25px;
+}
+.landing{
+    background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)),url(Image/construction-background-03659pnre0vs29gf.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+#nav1{
+    text-align: right;
+    background: var(--gradiant);
+    padding: 1em;
+    margin-right: 20px;
+}
+#nav1 a i{
+    margin-right: 10px;
+}
+#companyname{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#res{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.landing nav a:hover{
+    color: var(--yellow);
+}
+.heading{
+    text-align: center;
+    text-shadow: 5px 5px 5px var(--black);
+    color:var(--white);
+    
+}
+#heading .heading2{
+    font-size: 7vw;
+}
+#heading .heading3{
+    font-size: 2vw;
+}
+#historyheading{
+    text-align: center;
+    font-size: 7vw;
+    padding: 0;
+    margin-bottom: 0;
+}
+#history p{
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 10vh;
+    font-size: 2vw;
+    margin-left: 10px;
+}
+#list{
+    font-size: 2vw;
+    text-align: center;
+    text-decoration: none;
+    font-weight: normal;
+    float: left;
+}
+#serheading{
+    position: relative;
+    left: 10vw;
+    font-size: 5vw;
+}
+#list{
+    position: relative;
+    left:11vw;
+}
+.img{
+    position: relative;
+    background-image: url(Image/pexels-jeshootscom-834892.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    width: 40vw;
+    float:right;
+    margin-right: 100px;
+  /*border: 2px solid var(--black);*/
+    box-shadow: var(--black) 10px 10px 24px;
+    
+}
+.price1{
+    margin-top: 70vh;
+}
+#prheading{
+    position: relative;
+    left: 55vw;
+    font-size: 5vw;
+}
+#price p{
+    font-size: 2vw;
+    text-decoration: none;
+    font-weight: normal;
+    float: right;
+    padding-left: 100px;
+}
+.pimg{
+    height: 45vh;
+    width: 40vw;
+    background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
+    background-size: 100% 100%;
+    box-shadow: var(--black) 10px 10px 24px;
+    animation:changeImage 20s infinite;
+    margin-left: 50px;
+   /* border: 2px solid var(--black);*/
+}
+.touch{
+    text-align: center;
+}
+.touch h1{
+    font-size: 4vw;
+}
+.touch p{
+    font-size: 2vw;
+}
+#ulogo i{
+    font-size: 15vw;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.foot{
+    background-color:black;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.fcont{
+    font-size: 2vw;
+    text-align: center;
+    padding-top: 20px;
+}
+.foot{
+    font-size: 2vw;
+    padding-left: 30px;
+}
+#social{
+    color: white;
+    margin-left: 28vw;
+}
+#social a i{
+    color: var(--white);
+    padding-left: 5vw;
+    font-size: 3vw;
+}
+#contact p a{
+    text-decoration: none;
+    color: var(--white);
+}
+#contact p a i{
+    margin-right: 10px;
+    padding-left: 5px;
+}
+
+#contact p a:hover{
+    color: var(--red);
+   
+}
+#social a i:hover{
+    color: var(--red);
+    /* box-shadow: 0 0 15px var(--red); */
+    text-shadow: 0 0 20px var(--white);
+}
+.body1{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 25%;
+}
+.services{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+.price1{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+.touch{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+.foot{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 50% ;
+}
+
+
+@keyframes changeImage{
+    0%{
+        background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
+    }
+    25%{
+        background-image: url(Image/628268cc7d20506f6307dab83f843b97.jpg);
+    }
+    50%{
+        background-image: url(Image/195869-nomryjdgor-1699964440.jpg);
+    }
+    75%{
+        background-image: url(Image/628268cc7d20506f6307dab83f843b97.jpg);
+    }
+    100%{
+        background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
+    }
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
