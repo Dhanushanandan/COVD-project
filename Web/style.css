@@ -29,6 +29,13 @@ body{
     font-size: 20px;
     font-weight: bolder;
     background: var(--gradiant);
+    display: flex;
+}
+.header{
+     position: -webkit-sticky;
+    position: sticky; 
+    top: 0px;
+    z-index: 1000;/*display picture and contents under the nav bar*/
 }
 #res{
     text-align: right;
@@ -38,26 +45,50 @@ body{
 #companyname{
     flex:1;
 }
-.landing nav a{
+.heading3{
+    margin-top: 0px;
+}
+#loginbutton{
+    margin-left: 50px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+#nav1 a{
     text-decoration: none;
     color: var(--white);
     padding: 10px;
     font-size: 25px;
 }
+
 .landing{
     background-image: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)),url(Image/construction-background-03659pnre0vs29gf.jpg);
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    padding-top: 100px;
 }
 #nav1{
-    text-align: right;
     background: var(--gradiant);
     padding: 1em;
     margin-right: 20px;
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-end; */
 }
 #nav1 a i{
     margin-right: 10px;
+}
+.button i{
+    margin-right: 10px;
+}
+.button{
+    background-color: var(--gradiant);
+    color: var(--white);
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10%;
+    border-color: var(--yellow);
 }
 #companyname{
     margin-left: 20px;
@@ -67,8 +98,15 @@ body{
     margin-right: 20px;
     margin-top: 20px;
 }
-.landing nav a:hover{
-    color: var(--yellow);
+#nav1 a:hover{
+    color: var(--green);
+    border-bottom: 1px solid var(--green);
+    transition-duration: .2s;
+    transform: scaleX(.9);
+}
+.button:hover{
+    color: var(--green);
+    border: 1px solid var(--green);
 }
 .heading{
     text-align: center;
@@ -81,6 +119,10 @@ body{
 }
 #heading .heading3{
     font-size: 2vw;
+    padding-top: 20px;
+}
+#history{
+    padding-top: 10vh;
 }
 #historyheading{
     text-align: center;
@@ -89,7 +131,7 @@ body{
     margin-bottom: 0;
 }
 #history p{
-    text-align: center;
+    text-align: justify;
     padding: 20px;
     padding-bottom: 10vh;
     font-size: 2vw;
@@ -101,6 +143,9 @@ body{
     text-decoration: none;
     font-weight: normal;
     float: left;
+}
+#services{
+    padding-top: 15vh;
 }
 #serheading{
     position: relative;
@@ -122,14 +167,13 @@ body{
     margin-right: 100px;
   /*border: 2px solid var(--black);*/
     box-shadow: var(--black) 10px 10px 24px;
-    
 }
 .price1{
     margin-top: 70vh;
 }
 #prheading{
     position: relative;
-    left: 55vw;
+    left: 10vw;
     font-size: 5vw;
 }
 #price p{
@@ -215,11 +259,30 @@ body{
     animation: fade linear both;
     animation-timeline: view();
     animation-range: entry 50% cover 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#tag{
+    flex:1;
+}
+.img{
+    flex: 0.8;
 }
 .price1{
     animation: fade linear both;
     animation-timeline: view();
     animation-range: entry 50% cover 50%;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+#price{
+    flex: 1;
+    margin-top: 20vh;
+}
+#pimg{
+    flex:1;
+    margin-top: 20vh;
 }
 .touch{
     animation: fade linear both;
@@ -256,5 +319,36 @@ body{
     }
     100%{
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    #tag,.img,#pimg,#price{
+        flex: 100%;
+        margin-left: 17vw;
+        margin-top: 2vh;
+        margin-bottom: 10vh;
+        animation: fade linear both;
+        animation-timeline: view();
+        animation-range: entry 50% cover 50%;
+    }
+    #pimg{
+        flex: 100%;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+        animation: fade linear both;
+        animation-timeline: view();
+        animation-range: entry 75% cover 50%;
+    }
+    #price{
+        flex: 100%;
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-right: 20vw;
+    }
+    #price p{
+        padding-left: 0px;
     }
 }
