@@ -5,14 +5,16 @@
     --yellow:#FFC54D;
     --green:#53BF9D;
     --red:crimson;
-    --gradiant:linear-gradient(to right,rgb(9, 9, 9),rgb(53, 51, 51));
+    --gradiant:linear-gradient(to right,rgb(0, 0, 0),rgb(53, 51, 51));
+    --gradiant1:linear-gradient(to right,rgb(105, 104, 104),rgb(53, 51, 51));
 }
 html{
     /*scroll the window smoothly to bottom*/
     scroll-behavior: smooth;
 }
 body{
-    
+    min-width: 600px;
+    max-width: 100%;
     padding: 0;
     margin: 0;
     border: 0;
@@ -20,6 +22,21 @@ body{
     color: var(--black);
     background:var(--whitesmoke);
     overflow-x:hidden ;
+}
+#clogo{
+    padding: 0px;
+    margin: 0px;
+    background: url(Image/Company\ logo.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 10vh;
+    width: 10vw;
+    float:left;
+    margin-left: 25px;
+    border: 5px solid var(--red);
+    border-radius: 100%;
+    
 }
 .logo{
     color: var(--white);
@@ -36,6 +53,7 @@ body{
     position: sticky; 
     top: 0px;
     z-index: 1000;/*display picture and contents under the nav bar*/
+    width: 100%;
 }
 #res{
     text-align: right;
@@ -66,12 +84,13 @@ body{
     height: 100vh;
     width: 100vw;
     padding-top: 100px;
+    min-width: 600px;
 }
 #nav1{
     background: var(--gradiant);
     padding: 1em;
-    margin-right: 20px;
-    width: 99%;
+    /* margin-right: 20px; */
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     /* justify-content: flex-end; */
@@ -79,20 +98,29 @@ body{
 #nav1 a i{
     margin-right: 10px;
 }
-.button i{
+#loginbutton1 i{
     margin-right: 10px;
 }
-.button{
+#loginbutton1{
     background-color: var(--gradiant);
     color: var(--white);
     padding: 10px;
     font-size: 25px;
     border-radius: 10%;
     border-color: var(--yellow);
+    box-shadow: var(--black) 10px 10px 24px;
+    margin-left: auto;
+    padding-left: 7vw;
+    margin-right: 3vw;
+    border-radius: 50px;
+    margin-right: 8vw;
 }
 #companyname{
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
+    font-weight: bolder;
+    font-size: 3vw;
+    
 }
 #res{
     margin-right: 20px;
@@ -104,7 +132,7 @@ body{
     transition-duration: .2s;
     transform: scaleX(.9);
 }
-.button:hover{
+#loginbutton1:hover{
     color: var(--green);
     border: 1px solid var(--green);
 }
@@ -296,6 +324,333 @@ body{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Login form design */
+
+
+.contain{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    background:var(--gradiant);
+    height: 50vh;
+    width: 40vw;
+    color:white;
+    display: none;
+    border-radius: 40px;
+    border: var(--whitesmoke) solid 2px;
+    transition: .5s;
+    box-shadow: var(--whitesmoke) 0px 0px 10px 5px;
+    /* z-index: 500; */
+}
+
+.show-btn{
+    cursor: pointer;
+}
+#show:checked ~ .contain{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* position: fixed; */
+    display: block;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+#logincontainer h1{
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 20px;
+}
+.data{
+    font-size: 2vw;
+    padding: 20px;
+    margin: 20px;
+}
+#emailtext,#passwordtext{
+    font-size: 1.8vw;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid var(--whitesmoke);
+    color: var(--white);
+}
+#emailtext:hover,#passwordtext:hover{  
+    border:1px solid aqua;
+    border-radius: 50px;
+}
+.label3{
+    float: left;
+}
+#loginbutton{
+    font-size: 2vw;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    padding: 10px;
+    height: 5vh;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, .06);
+    border-radius: 50px;
+    color: var(--white);
+    /* text-shadow: 3px 3px 5px whitesmoke; */
+    box-shadow: 3px 3px 5px rgba(227, 227, 235, 0.37);
+    border-left: 1px solid rgb(158, 156, 156);
+    border-top: 1px solid rgb(158, 156, 156);
+    
+}
+#loginbutton:hover{
+    box-shadow: 3px 3px 5px rgba(8, 162, 224, 0.37);
+    border-left: 1px solid rgb(64, 198, 236);
+    border-top: 1px solid rgb(8, 162, 224);
+}
+.closebtn i{
+    color: var(--white);
+    font-size: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+#registerlabel{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.5vw;
+}
+#registerspan{
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+
+
+
+/* desktop screen size login */
+ @media screen and (min-width:830px) {
+    .contain{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background:var(--gradiant);
+    height: 80%;
+     width: 40vw;
+    color:white;
+    display: none;
+    border-radius: 40px;
+    border: var(--whitesmoke) solid 2px;
+    transition: .5s;
+    box-shadow: var(--whitesmoke) 0px 0px 10px 5px;
+    /* z-index: 1000; */
+    }
+} 
+
+/* mobile screen size login */
+ @media screen and (max-width:830px) {
+    .contain{
+        text-align: center;
+        position: absolute;
+        top: 45%;
+        left: 30%;
+        background:var(--gradiant);
+        height: 55%;
+        width: 40vw;
+        color:white;
+        display: none;
+        border-radius: 40px;
+    border: var(--whitesmoke) solid 2px;
+    transition: .5s;
+    box-shadow: var(--whitesmoke) 0px 0px 10px 5px;
+    /* z-index: 1000; */
+    }
+
+    #logincontainer h1{
+        font-size: 4vw;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #loginbutton1{
+        font-size: 2vw;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+        padding: 0px;
+        height: 4vh;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Register  */
+
+
+
+
+#registercontainer h1{
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 30px;
+    padding: 50px;
+}
+
+#registerbutton{
+    font-size: 2vw;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 2%;
+    padding: 10px;
+    height: 5vh;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, .06);
+    border-radius: 50px;
+    color: var(--white);
+    /* text-shadow: 3px 3px 5px whitesmoke; */
+    box-shadow: 3px 3px 5px rgba(227, 227, 235, 0.37);
+    border-left: 1px solid rgb(158, 156, 156);
+    border-top: 1px solid rgb(158, 156, 156);
+    
+}
+#registerbutton:hover{
+    box-shadow: 3px 3px 5px rgba(8, 162, 224, 0.37);
+    border-left: 1px solid rgb(64, 198, 236);
+    border-top: 1px solid rgb(8, 162, 224);
+}
+.regtextbox{
+    font-size: 1.8vw;
+    width: 90%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid var(--whitesmoke);
+    color: var(--white);
+    margin-bottom: 3vh;
+    margin-right:20px;
+    margin-left: 30px;
+}
+
+#registercontainer{
+    margin: 10px;
+}
+
+.registerlabel{
+    font-size: 1.8vw;
+    float: left;
+    margin-left: 40px;
+}
+
+.regtextbox:hover{  
+    border:1px solid aqua;
+    border-radius: 50px;
+}
+.registerform{
+    display: none;
+}
+
+#loginlabel2{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.5vw;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+
+/* mobile screen size register */
+ @media screen and (max-width:830px) {
+
+    #registercontainer h1{
+        font-size: 4vw;
+        text-align: center;margin-top: 30px;
+        padding: 20px;
+    }
+
+    #registerbutton{
+        font-size: 2vw;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+        padding: 0px;
+        height: 4vh;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes changeImage{
     0%{
         background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
@@ -350,5 +705,8 @@ body{
     }
     #price p{
         padding-left: 0px;
+    }
+    #loginbutton1{
+        margin-right: 50px;
     }
 }
