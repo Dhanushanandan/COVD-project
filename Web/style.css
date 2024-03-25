@@ -26,7 +26,7 @@ body{
 #clogo{
     padding: 0px;
     margin: 0px;
-    background: url(Image/Company\ logo.jpg);
+    background: url(Image/company\ logo.png);
     position: relative;
     background-size: cover;
     background-position: center;
@@ -34,9 +34,11 @@ body{
     width: 10vw;
     float:left;
     margin-left: 25px;
-    border: 5px solid var(--red);
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px solid var(--whitesmoke);
     border-radius: 100%;
-    
+    box-shadow: var(--white) 10px 10px 20px;
 }
 .logo{
     color: var(--white);
@@ -117,14 +119,16 @@ body{
 }
 #companyname{
     margin-left: 20px;
-    margin-top: 30px;
+    /* margin-top: 10px; */
     font-weight: bolder;
-    font-size: 3vw;
+    font-size: 5vw;
     
 }
 #res{
     margin-right: 20px;
+    padding-right: 20px;
     margin-top: 20px;
+    font-size: 1.5vw;
 }
 #nav1 a:hover{
     color: var(--green);
@@ -217,7 +221,7 @@ body{
     background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
     background-size: 100% 100%;
     box-shadow: var(--black) 10px 10px 24px;
-    animation:changeImage 20s infinite;
+    animation:changeImage 10s infinite;
     margin-left: 50px;
    /* border: 2px solid var(--black);*/
 }
@@ -322,13 +326,58 @@ body{
     animation-timeline: view();
     animation-range: entry 50% ;
 }
+#home{
+    width: 100%;
+}
 
 
 
 
 
+/* COVD name animation */
+#companyname{
+    background:linear-gradient(to right,rgb(35, 212, 53),#e20d0d 90%,#ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: Gradiant 3s linear infinite;
+}
+@keyframes Gradiant{
+    0%{
+        background-position: 0% 75%;
+    }50%{
+        background-position: 100% 50%;
+    }100%{
+        background-position: 0% 70%;
+    }
+}
 
 
+
+
+/* animation register and login */
+@keyframes slidein{
+    0%{
+        transform: translateX(-50%);
+    }50%{
+        transform: translateX(0);
+    }
+}
+
+
+#Home,#contain{
+    animation: slidein 2s;
+}
+@keyframes slidein1{
+    0%{
+        transform: translateX(50%);
+    }50%{
+        transform: translateX(0);
+    }
+}
+#registerform{
+    animation: slidein1 2s;
+}
 
 
 
@@ -374,11 +423,17 @@ input[type="checkbox"]{
     font-size: 4vw;
     text-align: center;
     margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 5px solid var(--whitesmoke);
+    border-radius: 50%;
 }
 .data{
     font-size: 2vw;
     padding: 20px;
     margin: 20px;
+}
+.data i{
+    margin-right: 10px;
 }
 #emailtext,#passwordtext{
     font-size: 1.8vw;
@@ -413,7 +468,6 @@ input[type="checkbox"]{
     box-shadow: 3px 3px 5px rgba(227, 227, 235, 0.37);
     border-left: 1px solid rgb(158, 156, 156);
     border-top: 1px solid rgb(158, 156, 156);
-    
 }
 #loginbutton:hover{
     box-shadow: 3px 3px 5px rgba(8, 162, 224, 0.37);
@@ -459,6 +513,12 @@ input[type="checkbox"]{
     box-shadow: var(--whitesmoke) 0px 0px 10px 5px;
     /* z-index: 1000; */
     }
+    #nav1{
+        width: 100%;
+    }
+    .logo{
+        width: 100%;
+    }
 } 
 
 /* mobile screen size login */
@@ -469,7 +529,7 @@ input[type="checkbox"]{
         top: 45%;
         left: 30%;
         background:var(--gradiant);
-        height: 55%;
+        height: 60%;
         width: 40vw;
         color:white;
         display: none;
@@ -490,10 +550,24 @@ input[type="checkbox"]{
         font-size: 2vw;
         width: 80%;
         margin-left: 10%;
-        margin-right: 10%;
+        margin-right: 5%;
         margin-top: 2%;
         padding: 0px;
         height: 4vh;
+    }
+    #companyname{
+        margin-left: 20px;
+        margin-top: 20px;
+        font-weight: bolder;
+        font-size: 5vw;
+        
+    }
+    
+    #nav1{
+        width: 100%;
+    }
+    .logo{
+        width: 100%;
     }
 } 
 
@@ -530,6 +604,11 @@ input[type="checkbox"]{
     text-align: center;
     margin-top: 30px;
     padding: 50px;
+    border-bottom: 5px solid var(--whitesmoke);
+    border-radius: 50%;
+}
+#registercontainer i{
+    margin-right: 10px;
 }
 
 #registerbutton{
@@ -647,10 +726,7 @@ input[type="checkbox"]{
 
 
 
-
-
-
-
+/* Image slider animation */
 @keyframes changeImage{
     0%{
         background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
@@ -668,6 +744,7 @@ input[type="checkbox"]{
         background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
     }
 }
+/* website scroll fade */
 @keyframes fade {
     0%{
         opacity: 0;
@@ -677,6 +754,7 @@ input[type="checkbox"]{
     }
 }
 
+/* mobile screen */
 @media screen and (max-width: 810px) {
     #tag,.img,#pimg,#price{
         flex: 100%;
@@ -708,5 +786,17 @@ input[type="checkbox"]{
     }
     #loginbutton1{
         margin-right: 50px;
+    }
+    #body1{
+        width: 100%;
+    }
+    .header{
+        width: 100%;
+    }
+    #nav1{
+        width: 100%;
+    }
+    .logo{
+        width: 100%;
     }
 }

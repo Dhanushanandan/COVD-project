@@ -1,0 +1,268 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+:root{
+    --whitesmoke:whitesmoke;
+    --white:white;
+    --black:black;
+    --yellow:#FFC54D;
+    --green:#53BF9D;
+    --red:crimson;
+    --gradiant:linear-gradient(to right,rgb(0, 0, 0),rgb(53, 51, 51));
+    --gradiant1:linear-gradient(to right,rgb(105, 104, 104),rgb(53, 51, 51));
+}
+body{
+    min-width: 600px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "Open sans", sans-serif;
+    color: var(--black);
+    background:var(--whitesmoke);
+    overflow-x:hidden ;
+}
+#clogo{
+    padding: 0px;
+    margin: 0px;
+    background: url(Image/company\ logo.png);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 10vh;
+    width: 10vw;
+    float:left;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px solid var(--whitesmoke);
+    border-radius: 100%;
+    box-shadow: var(--white) 10px 10px 20px;
+}
+.logo{
+    color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bolder;
+    background: var(--gradiant);
+    display: flex;
+}
+.header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+#res{
+    text-align: right;
+    font-size: 25px;
+    flex:1;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+#companyname{
+    flex:1;
+    font-size: 6vw;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+/* COVD name animation */
+#companyname{
+    background:linear-gradient(to right,rgb(35, 212, 53),#e20d0d 90%,#ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: Gradiant 3s linear infinite;
+}
+@keyframes Gradiant{
+    0%{
+        background-position: 0% 75%;
+    }50%{
+        background-position: 100% 50%;
+    }100%{
+        background-position: 0% 70%;
+    }
+}
+
+
+/* desktop screen size */
+@media screen and (min-width:830px) {
+    .logo{
+        width: 100%;
+        padding-right: 50px;
+        
+    }
+    
+} 
+
+/* mobile screen size */
+ @media screen and (max-width:830px) {
+    #companyname{
+        margin-left: 20px;
+        margin-top: -20px;
+        font-weight: bolder;
+        font-size: 10vw;
+        
+    }
+    .logo{
+        width: 100%;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+    width: 100%;
+    height: 84.5vh;
+    background-color: var(--whitesmoke);
+    margin-top: 0px;
+    padding-top: 0px;
+    background:url(Image/customerprofileback.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+}
+
+/* Register  */
+
+
+
+.registerform{
+    width: 50vw;
+    height: 80vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+
+}
+#registercontainer h1{
+    font-size: 4vw;
+    text-align: center;
+    padding: 50px;
+    border-bottom: 5px solid var(--whitesmoke);
+    border-radius: 50%;
+}
+#registercontainer i{
+    margin-right: 10px;
+}
+
+#registerbutton{
+    font-size: 2vw;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 2%;
+    padding: 10px;
+    height: 5vh;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 50px;
+    /* text-shadow: 3px 3px 5px whitesmoke; */
+    box-shadow: 3px 3px 5px rgba(227, 227, 235, 0.37);
+    border-left: 1px solid rgb(158, 156, 156);
+    border-top: 1px solid rgb(158, 156, 156);
+    
+}
+#registerbutton:hover{
+    box-shadow: 5px 5px 10px rgba(8, 162, 224, 0.37);
+    border-left: 1px solid rgb(64, 198, 236);
+    border-top: 1px solid rgb(8, 162, 224);
+}
+.regtextbox{
+    font-size: 1.8vw;
+    width: 90%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid var(--whitesmoke);
+    color: var(--white);
+    margin-bottom: 3vh;
+    margin-right:20px;
+    margin-left: 30px;
+}
+
+#registercontainer{
+    margin: 10px;
+    margin-top: 0px;
+    background:linear-gradient(to right,rgba(105, 104, 104,.5),rgba(53, 51, 51,.8));;
+    border-radius: 30px;
+    height: 70vh;
+    
+    border: 1px solid black;
+}
+
+
+.registerlabel{
+    font-size: 1.8vw;
+    float: left;
+    margin-left: 40px;
+}
+
+.regtextbox:hover{  
+    border:5px solid aqua;
+    border-radius: 50px;
+}
+
+#loginlabel2{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.5vw;
+    padding-left: 5px;
+}
+
+
+/* mobile screen size register */
+ @media screen and (max-width:830px) {
+
+    #registercontainer h1{
+        font-size: 4vw;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #registerbutton{
+        font-size: 2vw;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+        padding: 0px;
+        height: 4vh;
+    }
+    #registercontainer{
+        margin: 10px;
+        margin-top: 0px;
+        background:linear-gradient(to right,rgba(105, 104, 104,.5),rgba(53, 51, 51,.8));;
+        border-radius: 30px;
+        height: 50vh;
+        border: 1px solid black;
+    }
+} 
