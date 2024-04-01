@@ -130,7 +130,7 @@ body{
     /* justify-items: center;  */
     margin-top: 0px;
     padding-top: 0px;
-    background:url(Image/userdashback.jpg);
+    background-image:linear-gradient(rgba(0,0,0,.7),rgba(7, 7, 7, 0.2)),url(Image/userdashback.jpg);
     background-size: cover;
     background-position: center;
     

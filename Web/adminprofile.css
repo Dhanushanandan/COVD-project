@@ -143,7 +143,7 @@ body{
     background-color: var(--whitesmoke);
     margin-top: 0px;
     padding-top: 0px;
-    background:url(Image/adminprofileback.jpg);
+    background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(Image/adminprofileback.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -202,9 +202,10 @@ body{
     background: transparent;
     border-bottom: 1px solid var(--whitesmoke);
     color: var(--white);
-    margin-bottom: 3vh;
+    /* margin-bottom: 3vh; */
     margin-right:20px;
     margin-left: 30px;
+    padding-left: 20px;
 }
 
 #registercontainer{
@@ -264,3 +265,14 @@ body{
         border: 1px solid var(--white);
     }
 } 
+
+
+
+/* profile validation css js*/
+.regemailcontainer .error,.Namecontainer .error,.repasswordcontainer .error,.contactcontainer .error{
+    color: red;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+}

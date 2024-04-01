@@ -1,0 +1,269 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+:root {
+    --whitesmoke: whitesmoke;
+    --white: white;
+    --black: black;
+    --yellow: #FFC54D;
+    --green: #53BF9D;
+    --red: crimson;
+    --gradiant: linear-gradient(to right, rgb(0, 0, 0), rgb(53, 51, 51));
+    --gradiant1: linear-gradient(to right, rgb(105, 104, 104), rgb(53, 51, 51));
+}
+
+body {
+    min-width: 600px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "Open sans", sans-serif;
+    color: var(--black);
+    background: var(--whitesmoke);
+    overflow-x: hidden;
+}
+
+#clogo {
+    padding: 0px;
+    margin: 0px;
+    background: url(Image/company\ logo.png);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 10vh;
+    width: 10vw;
+    float: left;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px solid var(--whitesmoke);
+    border-radius: 100%;
+    box-shadow: var(--white) 10px 10px 20px;
+}
+
+.logo {
+    color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bolder;
+    background: var(--gradiant);
+    display: flex;
+}
+
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+#res {
+    text-align: right;
+    font-size: 25px;
+    flex: 1;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+#companyname {
+    flex: 1;
+    font-size: 6vw;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+
+/* COVD name animation */
+
+#companyname {
+    background: linear-gradient(to right, rgb(35, 212, 53), #e20d0d 90%, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: Gradiant 3s linear infinite;
+}
+
+@keyframes Gradiant {
+    0% {
+        background-position: 0% 75%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 70%;
+    }
+}
+
+
+/* desktop screen size */
+
+@media screen and (min-width:830px) {
+    .logo {
+        width: 100%;
+        padding-right: 50px;
+    }
+}
+
+
+/* mobile screen size */
+
+@media screen and (max-width:830px) {
+    #companyname {
+        margin-left: 20px;
+        margin-top: -20px;
+        font-weight: bolder;
+        font-size: 10vw;
+    }
+    .logo {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+    height: 84.5vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(3, 3, 3, 0.6)),url(Image/paymentback.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.tablecontainer{
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,.6),rgba(3, 3, 3, 0.6));
+    width: 80%;
+    height: 65%;
+    margin-left: 10%;
+    margin-top: 15vh;
+    color: var(--white);
+    border-radius: 50px;
+}
+.tablecontainer table{
+    width: 100%;
+    text-align: center;
+    font-size: 2vw;
+    margin-top:20px;
+}
+.tablecontainer table tr td{
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+}
+#design td{
+    border: 0px;
+    border-bottom: 4px solid white;
+    border-radius: 20px;
+}
+
+
+
+
+/* search button style */
+.search{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 6vw;
+    margin-bottom: 0;
+    width: 40%;
+    height: 6%;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: all 1s;
+}
+#searchtext{
+    width: 87%;
+    font-size: 2vw;
+    padding: 8px;
+    border-radius: 50px;
+    background: transparent;
+    display: none;
+    transition: all 5s;
+}
+.searchbox{
+    color: white;
+}
+#searchbtn{
+    height: 100%;
+    padding: 20px;
+    width: 10%;
+    font-size: 1.5vw;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(rgba(44, 43, 43, 0.5),rgba(208, 207, 207, 0.5));
+}
+.searchcontainer:hover{
+    cursor: pointer;
+}
+.search:hover #searchtext{
+    display: inline-block;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+    box-shadow: 0 0 15px var(--green),
+    0 0 30px var(--green);
+}
+
+.search:hover #searchbtn{
+    float: right;
+    background: linear-gradient(rgba(252, 3, 3, 0.5),rgba(232, 228, 228, 0.5));
+    font-weight:bold;
+    box-shadow:0 0 15px aquamarine,
+    0 0 30px aquamarine;
+}
+/* mobile view style */
+@media screen and (max-width:1200px) {
+    .main{
+        height: 86vh;
+    }
+    /* .table{
+        width: 90%;
+        height: 50%;
+        background:linear-gradient(rgba(254, 253, 253, 0.5),rgba(255, 254, 254, 0.5));
+        margin-left: 5%;
+        margin-top: 5%;
+    } */
+    
+    #searchbtn{
+        height: 50%;
+        padding: 10px;
+        width: 10%;
+        font-size: 1.5vw;
+        text-align: center;
+        border-radius: 50%;
+        background: linear-gradient(rgba(44, 43, 43, 0.5),rgba(208, 207, 207, 0.5));
+    }
+    #searchtext{
+        width: 85%;
+    }
+}
+
+
+
+
+
+
+
+
+/*  validation css js*/
+.error{
+    color: red;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+}

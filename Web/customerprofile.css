@@ -143,7 +143,7 @@ body{
     background-color: var(--whitesmoke);
     margin-top: 0px;
     padding-top: 0px;
-    background:url(Image/customerprofileback.jpg);
+    background-image:linear-gradient(rgba(0,0,0,.7),rgba(7, 7, 7, 0.2)),url(Image/customerprofileback.jpg);
     background-size: cover;
     background-position: center;
     opacity: 0.9;
@@ -168,6 +168,7 @@ body{
     padding: 50px;
     border-bottom: 5px solid var(--whitesmoke);
     border-radius: 50%;
+    color: white;
 }
 #registercontainer i{
     margin-right: 10px;
@@ -183,7 +184,7 @@ body{
     height: 5vh;
     border: none;
     outline: none;
-    background: rgba(255, 255, 255, .7);
+    /* background: rgba(255, 255, 255, .7); */
     border-radius: 50px;
     /* text-shadow: 3px 3px 5px whitesmoke; */
     box-shadow: 3px 3px 5px rgba(227, 227, 235, 0.37);
@@ -193,8 +194,8 @@ body{
 }
 #registerbutton:hover{
     box-shadow: 5px 5px 10px rgba(8, 162, 224, 0.37);
-    border-left: 1px solid rgb(64, 198, 236);
-    border-top: 1px solid rgb(8, 162, 224);
+    border-left: 5px solid rgb(64, 198, 236);
+    border-top: 5px solid rgb(8, 162, 224);
 }
 .regtextbox{
     font-size: 1.8vw;
@@ -204,9 +205,10 @@ body{
     background: transparent;
     border-bottom: 1px solid var(--whitesmoke);
     color: var(--white);
-    margin-bottom: 3vh;
+    /* margin-bottom: 3vh; */
     margin-right:20px;
     margin-left: 30px;
+    padding-left: 20px;
 }
 
 #registercontainer{
@@ -266,3 +268,15 @@ body{
         border: 1px solid black;
     }
 } 
+
+
+
+
+/* profile validation css js*/
+.regemailcontainer .error,.Namecontainer .error,.repasswordcontainer .error,.contactcontainer .error{
+    color: red;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+}

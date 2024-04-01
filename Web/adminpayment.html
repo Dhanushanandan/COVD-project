@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="adminpayment.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <div id="clogo" class="clogo"></div>
+            <div id="companyname">COVD</div>
+            <div id="res">
+                <i class="fa-solid fa-phone"></i> For Reservation:0771326639
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="tablecontainer">
+
+            <div class="search">
+                <input type="search" id="searchtext" class="searchbox" placeholder="Search Here....">
+                <div class="error1"></div>
+                <button id="searchbtn" class="searchbox" type="submit" onclick="searchfun()"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="table">
+                <table>
+                    <tr id="desgin">
+                        <td>Payment ID</td>
+                        <td>Payment Ammount</td>
+                        <td>User Email</td>
+                        <td>Payment Status</td>
+                    </tr>
+
+                    <tr>
+                        <td>001</td>
+                        <td>2000/=</td>
+                        <td>asd@gmail.com</td>
+                        <td>Paid</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="error"></div>
+            <input type="text" placeholder="Payment ID" class="intext" id="paymentid">
+            <!-- <div class="error"></div> -->
+            <input type="text" placeholder="Payment Amount" class="intext" id="amount">
+            <!-- <div class="error"></div> -->
+            <input type="text" placeholder="User Email" class="intext" id="mail">
+            <!-- <div class="error"></div> -->
+            <input type="text" placeholder="Payment Status" class="intext" id="status">
+            <!-- <div class="error"></div> -->
+            <div class="buttons">
+                <button type="submit" onclick="addfun()" id="add">ADD</button>
+                <button type="submit" onclick="Updatefun()" id="Update">Update</button>
+                <button type="submit" onclick="Deletefun()" id="Delete">Delete</button>
+                <button type="submit" onclick="Viewfun()" id="View">View</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer></footer>
+    <script src="adminpayment.js"></script>
+</body>
+
+</html>

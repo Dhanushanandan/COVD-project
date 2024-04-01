@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admincustomer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <div id="clogo" class="clogo"></div>
+            <div id="companyname">COVD</div>
+            <div id="res">
+                <i class="fa-solid fa-phone"></i> For Reservation:0771326639
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="tablecontainer">
+
+            <div class="search">
+                <input type="search" id="searchtext" class="searchbox" placeholder="Search Here....">                
+                <div class="error1"></div>
+                <button id="searchbtn" class="searchbox" type="submit" onclick="searchfun()"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="table">
+                <table>
+                    <tr id="desgin">
+                        <td>User Email</td>
+                        <td>Name</td>
+                        <td>Contact No</td>
+                    </tr>
+
+                    <tr>
+                        <td>asd@gmail.com</td>
+                        <td>asd</td>
+                        <td>+94-712051203</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="error"></div>
+            <input type="text" placeholder="User Email" class="intext" id="mail">
+            <input type="text" placeholder="User Name" class="intext" id="name">
+            <input type="password" placeholder="User Password" class="intext" id="pass">
+            <input type="text" placeholder="Contact No" class="intext" id="no">
+            <div class="buttons">
+                <button type="submit" onclick="addfun()" id="add">ADD</button>
+                <button type="submit" onclick="Updatefun()" id="Update">Update</button>
+                <button type="submit" onclick="Deletefun()" id="Delete">Delete</button>
+                <button type="submit" onclick="Viewfun()" id="View">View</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer></footer>
+    <script src="admincustomervalid.js"></script>
+</body>
+
+</html>

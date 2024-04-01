@@ -1,191 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COVD</title>
-    <!-- External style sheet link -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Icons link import -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-  </head>
-  <body id="mainbody">
-    <div class="header">
-      <div class="logo">
-        <div id="clogo" class="clogo"></div>
-        <div id="companyname">COVD</div>
-        <div id="res">
-          <i class="fa-solid fa-phone"></i>
-          For Reservation:0771326639
-        </div>
-      </div>
-      <nav id="nav1">
-        <a href="#mainbody"><i class="fa-solid fa-house-chimney"></i>Home</a>
-        <a href="#history"><i class="fa-solid fa-address-card"></i>About Us</a>
-        <a href="#services"><i class="fa-solid fa-pen-ruler"></i>Our Service</a>
-        <a href="#price1"
-          ><i class="fa-solid fa-money-check-dollar"></i>Our Pricing</a
-        >
-        <a href="#contact"
-          ><i class="fa-regular fa-address-book"></i>Contact Us</a
-        >
-        <a href="#loginbtn" id="loginbutton1"><label for="show" class="show-btn" id="loginbtn"><i class="fa-regular fa-circle-user"></i>Login</label></a>
-      </nav>
-      </div>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COVD</title>
+  <!-- External style sheet link -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Icons link import -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
 
-      <!-- Login form -->
-      <div id="main">
-        <input type="checkbox" id="show">
-        <!-- <label for="show" class="show-btn" id="loginbtn"><i class="fa-regular fa-circle-user"></i>login</label> -->
-        <div class="contain" id="contain">
-          <form action="" class="f" name="Home" id="Home">
-            <div><label for="show" id="closebtn" class="closebtn" title="close"><i class="fa fa-times" aria-hidden="true"></i></label></div>
-            <div id="logincontainer">
-              <h1>Login</h1>
-              <div id="emailcontainer" class="data">
-                  <label for="" id="emaillabel" class="label3"><i class="fa-solid fa-envelope"></i>Email</label>
-                  <input type="text" id="emailtext">
-              </div>
-              <div id="passwordcontainer" class="data">
-                  <label for="" id="passwordlabel" class="label3"><i class="fa-solid fa-lock"></i>Passsword</label>
-                  <input type="password" id="passwordtext">
-              </div>
-              <button id="loginbutton">Login</button>
-              <div id="registerlabel" class="llabel">Don't have an Account?<span id="registerspan" onclick="hide()">Sign up</span></div>
-            </div>  
-          </form>
-
-
-          <!-- Register Form -->
-          <form action="" class="registerform" name="registerform" id="registerform">
-            <!-- <div><label for="show" id="closebtn" class="closebtn" title="close"><i class="fa fa-times" aria-hidden="true"></i></label></div> -->
-            <!-- <div><label for="show1" id="closebtn1" class="closebtn1" title="close1" onclick="close1()"><i class="fa fa-times" aria-hidden="true"></i></label></div> -->
-            
-            <div id="registercontainer">
-              <h1>Register</h1>
-              <div id="regemailcontainer" class="regemailcontainer">
-                  <label for="" id="reemaillabel" class="registerlabel"><i class="fa-solid fa-envelope"></i>Email</label>
-                  <input type="text" id="reemailtext" class="regtextbox">
-              </div>
-              <div id="Namecontainer" class="Namecontainer">
-                <label for="" id="Namelabel"class="registerlabel"><i class="fa-solid fa-user"></i>User Name</label>
-                <input type="text" id="Nametext" class="regtextbox" >
-            </div>
-              <div id="repasswordcontainer" class="repasswordcontainer">
-                  <label for="" id="repasswordlabel" class="registerlabel"><i class="fa-solid fa-lock"></i>Passsword</label>
-                  <input type="password" id="repasswordtext" class="regtextbox" >
-              </div>
-              <div id="contactcontainer" class="contactcontainer">
-                <label for="" id="contactlabel"class="registerlabel"><i class="fa-solid fa-mobile-screen"></i>Contact number</label>
-                <input type="text" id="contacttext" class="regtextbox">
-            </div>
-              <button id="registerbutton">Register</button>
-            </div>  
-            <div id="loginlabel2">Already have an Account?<span id="loginlabel2" onclick="hide1()">Login</span></div>
-            
-          </form>
-        </div>
-      </div>
-
-      <!-- landing page -->
-      <div class="landing" id="home">
-        <div class="heading" id="heading">
-          <h3 class="heading3">WELCOME TO</h3>
-          <h1 class="heading2">COVD</h1>
-          <h1 class="heading2">CIVIL ENGINEERING</h1>
-          <h1 class="heading2">CONSTRUCTION</h1>
-          <h3 class="heading3">OUR CLIENTS ARE OUR FIRST PRIORITY</h3>
-        </div>
+<body id="mainbody">
+  <div class="header">
+    <div class="logo">
+      <div id="clogo" class="clogo"></div>
+      <div id="companyname">COVD</div>
+      <div id="res">
+        <i class="fa-solid fa-phone"></i>
+        For Reservation:0771326639
       </div>
     </div>
-    <div class="body1" id="body1">
-      <div id="history">
-        <h1 id="historyheading">HISTORY</h1>
-        <p id="para1">
-          Since its inception in 2007.Our company has grown from a constraction
-          drawing,subcontractor to a comprehensive constractionand planning
-          firm.Beginning with our headquaters in Madapola,Teldeniya, and a
-          branch on Kandy Road. We have expanded our operations
-          significantly.Over the years,we've diversifiedour services,including
-          building and house planning,surveying,estimating,and landscaping.In
-          2012,we estabilished our construction company,specializing in labor
-          subcontracting,and opened a branch on Kandy Road to better serve our
-          clients.We've consistently evolved,participating as working,partners
-          and enhancing our capabilities in building design.Today,we excel in
-          providing full detailed council drawings and constraction
-          services,marking our commitment to excellence and innovation in the
-          construction industry.
-        </p>
-      </div>
-      <div id="services" class="services">
-        <div id="tag">
-          <h1 id="serheading">OUR SERVICES</h1>
-          <div id="list">
-            <p>ALL KIND OF DRAWINGS</p>
-            <p>ALL KIND OF ESTIMATE</p>
-            <p>CIVIL ENGINEERING CONSTRUCTING</p>
-            <p>CONSULTANCY SERVICES</p>
-            <p>RATE ANALYZING</p>
-            <p>LANDSCAPING</p>
+    <nav id="nav1">
+      <a href="#mainbody"><i class="fa-solid fa-house-chimney"></i>Home</a>
+      <a href="#history"><i class="fa-solid fa-address-card"></i>About Us</a>
+      <a href="#services"><i class="fa-solid fa-pen-ruler"></i>Our Service</a>
+      <a href="#price1"><i class="fa-solid fa-money-check-dollar"></i>Our Pricing</a>
+      <a href="#contact"><i class="fa-regular fa-address-book"></i>Contact Us</a>
+      <a href="#loginbtn" id="loginbutton1"><label for="show" class="show-btn" id="loginbtn"><i
+            class="fa-regular fa-circle-user"></i>Login</label></a>
+    </nav>
+  </div>
+
+
+  <!-- Login form -->
+  <div id="main">
+    <input type="checkbox" id="show">
+    <!-- <label for="show" class="show-btn" id="loginbtn"><i class="fa-regular fa-circle-user"></i>login</label> -->
+    <div class="contain" id="contain">
+      <form action="" class="f" name="Home" id="Home">
+        <div><label for="show" id="closebtn" class="closebtn" title="close"><i class="fa fa-times"
+              aria-hidden="true"></i></label></div>
+        <div id="logincontainer">
+          <h1>Login</h1>
+          <div id="emailcontainer" class="data">
+            <label for="" id="emaillabel" class="label3"><i class="fa-solid fa-envelope"></i>Email</label>
+            <input type="text" id="emailtext" name="emailtext" placeholder="asd@gmail.com">
+            <div class="error" id="error"></div>
           </div>
+          <div id="passwordcontainer" class="data">
+            <label for="" id="passwordlabel" class="label3"><i class="fa-solid fa-lock"></i>Passsword</label>
+            <input type="password" id="passwordtext" placeholder="********">
+            <div class="error"></div>
+          </div>
+          <button id="loginbutton" type="submit" value="submit">Login</button>
+          <div id="registerlabel" class="llabel">Don't have an Account?<span id="registerspan" onclick="hide()">Sign
+              up</span></div>
         </div>
-        <div class="img"></div>
-      </div>
+      </form>
 
-      <div class="price1" id="price1">
-        <div id="price">
-          <h1 id="prheading">OUR PRICING</h1>
-          <p>
-            FOR CONSTRUCTION DRAWING PER Sq.ft OF FLOORS <br />AREA=RS25 <br />
-            FOR DETAILED ESTIMATE <br />
-            =VALUE OF ESTIMATED*0.3/100%
-          </p>
+
+      <!-- Register Form -->
+      <form action="" class="registerform" name="registerform" id="registerform">
+        <!-- <div><label for="show" id="closebtn" class="closebtn" title="close"><i class="fa fa-times" aria-hidden="true"></i></label></div> -->
+        <!-- <div><label for="show1" id="closebtn1" class="closebtn1" title="close1" onclick="close1()"><i class="fa fa-times" aria-hidden="true"></i></label></div> -->
+
+        <div id="registercontainer">
+          <h1>Register</h1>
+          <div id="regemailcontainer" class="regemailcontainer">
+            <label for="" id="reemaillabel" class="registerlabel"><i class="fa-solid fa-envelope"></i>Email</label>
+            <input type="text" id="reemailtext" class="regtextbox" placeholder="asd@gmail.com">
+            <div class="error"></div>
+          </div>
+          <div id="Namecontainer" class="Namecontainer">
+            <label for="" id="Namelabel" class="registerlabel"><i class="fa-solid fa-user"></i>User Name</label>
+            <input type="text" id="Nametext" class="regtextbox" placeholder="asd">
+            <div class="error"></div>
+          </div>
+          <div id="repasswordcontainer" class="repasswordcontainer">
+            <label for="" id="repasswordlabel" class="registerlabel"><i class="fa-solid fa-lock"></i>Passsword</label>
+            <input type="password" id="repasswordtext" class="regtextbox" placeholder="********">
+            <div class="error"></div>
+          </div>
+          <div id="contactcontainer" class="contactcontainer">
+            <label for="" id="contactlabel" class="registerlabel"><i class="fa-solid fa-mobile-screen"></i>Contact
+              number</label>
+            <input type="text" id="contacttext" class="regtextbox" placeholder="07********">
+            <div class="error"></div>
+          </div>
+          <button id="registerbutton" type="submit" value="submit">Register</button>
         </div>
-        <div class="pimg" id="pimg"></div>
-      </div>
+        <div id="loginlabel2">Already have an Account?<span id="loginlabel2" onclick="hide1()">Login</span></div>
 
-      <div class="touch" id="touch">
-        <p id="ulogo"><i class="fa-solid fa-user-tie"></i></p>
-        <h1 id="theading">KEEP IN TOUCH</h1>
-        <p>ITS IS OUR RESPONSIBILITY TO GIVE YOU THE BEST</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- landing page -->
+  <div class="landing" id="home">
+    <div class="heading" id="heading">
+      <h3 class="heading3">WELCOME TO</h3>
+      <h1 class="heading2">COVD</h1>
+      <h1 class="heading2">CIVIL ENGINEERING</h1>
+      <h1 class="heading2">CONSTRUCTION</h1>
+      <h3 class="heading3">OUR CLIENTS ARE OUR FIRST PRIORITY</h3>
+    </div>
+  </div>
+  </div>
+  <div class="body1" id="body1">
+    <div id="history">
+      <h1 id="historyheading">HISTORY</h1>
+      <p id="para1">
+        Since its inception in 2007.Our company has grown from a constraction
+        drawing,subcontractor to a comprehensive constractionand planning
+        firm.Beginning with our headquaters in Madapola,Teldeniya, and a
+        branch on Kandy Road. We have expanded our operations
+        significantly.Over the years,we've diversifiedour services,including
+        building and house planning,surveying,estimating,and landscaping.In
+        2012,we estabilished our construction company,specializing in labor
+        subcontracting,and opened a branch on Kandy Road to better serve our
+        clients.We've consistently evolved,participating as working,partners
+        and enhancing our capabilities in building design.Today,we excel in
+        providing full detailed council drawings and constraction
+        services,marking our commitment to excellence and innovation in the
+        construction industry.
+      </p>
+    </div>
+    <div id="services" class="services">
+      <div id="tag">
+        <h1 id="serheading">OUR SERVICES</h1>
+        <div id="list">
+          <p>ALL KIND OF DRAWINGS</p>
+          <p>ALL KIND OF ESTIMATE</p>
+          <p>CIVIL ENGINEERING CONSTRUCTING</p>
+          <p>CONSULTANCY SERVICES</p>
+          <p>RATE ANALYZING</p>
+          <p>LANDSCAPING</p>
+        </div>
       </div>
+      <div class="img"></div>
     </div>
 
-    <footer class="foot">
-      <div class="fcont" id="contact">
+    <div class="price1" id="price1">
+      <div id="price">
+        <h1 id="prheading">OUR PRICING</h1>
         <p>
-          <a href="#mainbody"><i class="fa-solid fa-house-chimney"></i>Home</a>
-          <a href="#services"
-            ><i class="fa-solid fa-pen-ruler"></i>Our Service</a
-          >
-          <a href="#price1"
-            ><i class="fa-solid fa-money-check-dollar"></i>Our Pricing</a
-          >
-          <a href="#contact"
-            ><i class="fa-regular fa-address-book"></i>Contact Us</a
-          >
-          <a href=""><i class="fa-regular fa-circle-user"></i>Login</a>
+          FOR CONSTRUCTION DRAWING PER Sq.ft OF FLOORS <br />AREA=RS25 <br />
+          FOR DETAILED ESTIMATE <br />
+          =VALUE OF ESTIMATED*0.3/100%
         </p>
-        <p>Contact Us</p>
-        <p>phone</p>
-        <p>0771326639</p>
-        <p>0712527383</p>
-        <p>Email</p>
-        <p>LIYANEDRAU@GMAIL.COM</p>
-        <address>No 179,Madapola,Karalliyadda,Theldeniya,Kandy.</address>
       </div>
-      <p><i class="fa-regular fa-copyright"></i>All Rights Reserved.</p>
-      <div class="social" id="social">
-        <a href=""><i class="fa-brands fa-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-twitter"></i></a>
-        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-      </div>
-    </footer>
+      <div class="pimg" id="pimg"></div>
+    </div>
+
+    <div class="touch" id="touch">
+      <p id="ulogo"><i class="fa-solid fa-user-tie"></i></p>
+      <h1 id="theading">KEEP IN TOUCH</h1>
+      <p>ITS IS OUR RESPONSIBILITY TO GIVE YOU THE BEST</p>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="fcont" id="contact">
+      <p>
+        <a href="#mainbody"><i class="fa-solid fa-house-chimney"></i>Home</a>
+        <a href="#services"><i class="fa-solid fa-pen-ruler"></i>Our Service</a>
+        <a href="#price1"><i class="fa-solid fa-money-check-dollar"></i>Our Pricing</a>
+        <a href="#contact"><i class="fa-regular fa-address-book"></i>Contact Us</a>
+        <!-- <a href=""><i class="fa-regular fa-circle-user"></i>Login</a> -->
+      </p>
+      <p>Contact Us</p>
+      <p>phone</p>
+      <p>0771326639</p>
+      <p>0712527383</p>
+      <p>Email</p>
+      <p>LIYANEDRAU@GMAIL.COM</p>
+      <address>No 179,Madapola,Karalliyadda,Theldeniya,Kandy.</address>
+    </div>
+    <p><i class="fa-regular fa-copyright"></i>All Rights Reserved.</p>
+    <div class="social" id="social">
+      <a href="https://www.facebook.com/profile.php?id=100064985920179&mibextid=ZbWKwL" target="_blank"><i
+          class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
 
 
 
@@ -193,45 +194,42 @@
 
 
 
-<script>
-  var x=document.getElementById('registerform');
-  var y=0;
-  
-  var a=document.getElementById('Home');
-  var b=0;
+  <script>
+    var x = document.getElementById('registerform');
+    var y = 0;
 
-  //  var c=document.getElementById('contain');
-  // var d=0;
-  
+    var a = document.getElementById('Home');
+    var b = 0;
 
-  function hide(){
-    if(y==1){
-      x.style.display='block';
-      a.style.display='none';
-      y=0;
-    }else{
-      x.style.display='none';
-      y=1;
+    //  var c=document.getElementById('contain');
+    // var d=0;
+
+
+    function hide() {
+      if (y == 1) {
+        x.style.display = 'block';
+        a.style.display = 'none';
+        y = 0;
+      } else {
+        x.style.display = 'none';
+        y = 1;
+      }
     }
-  }
 
-  function hide1(){
-    if(b==1){
-      a.style.display='block';
-      x.style.display='none';
-      b=0;
-    }else{
-      a.style.display='none';
-      b=1;
+    function hide1() {
+      if (b == 1) {
+        a.style.display = 'block';
+        x.style.display = 'none';
+        b = 0;
+      } else {
+        a.style.display = 'none';
+        b = 1;
+      }
     }
-  }
+  </script>
 
-  // function close1(){
-    
-  // }
+  <script src="formvalidate.js"></script>
 
-  setTimeout("close1",300);
-</script>
+</body>
 
-  </body>
 </html>

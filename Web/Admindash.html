@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COVD</title>
     <link rel="stylesheet" href="Admindash.css">
     <!-- Icons link import -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
+
 <body>
-   
+
     <header class="start">
         <!-- <div class="logo">
             <div id="clogo" class="clogo"></div>
@@ -26,24 +25,42 @@
         <input type="checkbox" id="check" class="menu1">
         <label for="check" id="menu" class="menu1"><i class="fa-solid fa-bars"></i></label>
         <label for="check" id="cancelbtn" class="menu1"><i class="fa-solid fa-circle-xmark"></i></label>
-        
+
         <div class="slider" id="slider">
             <div class="heading">Menu</div>
-                <a class="active" id="active" href="adminHome.html"><i class="fa-solid fa-house"></i><span id="text">Dashboard</span></a>
+
+            <button class="active" id="btn" onclick="loadpage()"><i class="fa-solid fa-house"></i><span
+                    id="text">Dashboard</span></button>
+            <button class="active" id="btn1" onclick="loadpage()"><i class="fa-solid fa-id-card"></i></i><span
+                    id="text">Profile</span></button>
+            <button class="active" id="btn2" onclick="loadpage()"><i class="fa-solid fa-compass-drafting"></i><span
+                    id="text">Design</span></button>
+            <button class="active" id="btn3" onclick="loadpage()"><i class="fa-regular fa-credit-card"></i></i><span
+                    id="text">Payments</span></button>
+            <button class="active" id="btn4" onclick="loadpage()"><i class="fa-solid fa-person"></i><span
+                    id="text">Customer</span></button>
+            <button class="active" id="btn5" onclick="loadpage()"><i class="fa-solid fa-phone-volume"></i><span
+                    id="text">Contact Us</span></button>
+
+
+
+
+
+
+            <!-- <a class="active" id="active" href="adminHome.html"><i class="fa-solid fa-house"></i><span id="text">Dashboard</span></a>
                 <a class="active" href="adminprofile.html"><i class="fa-solid fa-id-card"></i></i><span id="text">Profile</span></a>
                 <a class="active" href=""><i class="fa-solid fa-compass-drafting"></i><span id="text">Design</span></a>
                 <a class="active" href=""><i class="fa-regular fa-credit-card"></i></i><span id="text">Payments</span></a>
                 <a class="active" href=""><i class="fa-solid fa-person"></i><span id="text">Customer</span></a>
-                <a href="" class="active"><i class="fa-solid fa-phone-volume"></i><span id="text">Contact Us</span></a>
+                <a href="" class="active"><i class="fa-solid fa-phone-volume"></i><span id="text">Contact Us</span></a> -->
 
         </div>
     </header>
 
 
-    <div class="pagebody">
-        <div id="call">
-        </div>
-        
+    <div id="pagebody">
+
+
     </div>
 
 
@@ -52,6 +69,131 @@
         <div class="end">
 
         </div>
-     </footer>
+    </footer>
+
+
+
+    <!-- load html page in a div -->
+    <Script>
+        $page = "";
+        const button = document.getElementById('btn');
+        const box = document.getElementById('pagebody');
+        const button1 = document.getElementById('btn1');
+        const button2 = document.getElementById('btn2');
+        const button3 = document.getElementById('btn3');
+        const button4 = document.getElementById('btn4');
+
+        const button5 = document.getElementById('btn5');
+
+
+        //page load time display page
+        $page = 'adminHome.html';
+        loadPage();
+        document.getElementById("check").checked = false;
+
+        // load dashbaord
+        button.addEventListener('click', () => {
+            $page = 'adminHome.html';
+            loadPage();
+            document.getElementById("check").checked = false;
+        });
+
+
+        // load profile
+        button1.addEventListener('click', () => {
+            $page = 'adminprofile.html';
+            loadPage();
+            document.getElementById("check").checked = false;
+
+            //load the script
+            var scriptelement = document.createElement('script');
+            scriptelement.id = 'currentscript';
+            scriptelement.src = 'profilevalidation.js';
+            document.head.appendChild(scriptelement);
+        });
+
+
+
+
+        //load Design
+        button2.addEventListener('click', () => {
+            $page = 'admindesign.html';
+            loadPage();
+            document.getElementById("check").checked = false;
+
+            //load the script
+            var scriptelement = document.createElement('script');
+            scriptelement.id = 'currentscript';
+            scriptelement.src = 'admindesign.js';
+            document.head.appendChild(scriptelement);
+        });
+
+        // load payments
+        button3.addEventListener('click', () => {
+            $page = 'adminpayment.html';
+            loadPage();
+            document.getElementById("check").checked = false;
+
+            //load the script
+            var scriptelement = document.createElement('script');
+            scriptelement.id = 'currentscript';
+            scriptelement.src = 'adminpayment.js';
+            document.head.appendChild(scriptelement);
+
+        });
+
+        // load customer
+        button4.addEventListener('click', () => {
+            $page = 'admincustomer.html';
+            loadPage();
+            document.getElementById("check").checked = false;
+
+
+            //load the script
+            var scriptelement = document.createElement('script');
+            scriptelement.id = 'currentscript';
+            scriptelement.src = 'admincustomervalid.js';
+            document.head.appendChild(scriptelement);
+        });
+
+
+        // load contact us
+        button5.addEventListener('click', () => {
+            $page = 'admincontactus.html';
+            loadPage();
+            document.getElementById("check").checked = false;
+        });
+
+        function loadPage() {
+            fetch($page)
+                .then(response => response.text())
+                .then(html => {
+                    box.innerHTML = html;
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }
+
+
+
+
+
+
+        //     function loadPage2() {
+
+
+        //         fetch($page)
+        //              .then(response => response.text())
+        //              .then(html => {
+        //               box.innerHTML = html;
+        //          })
+        //     .catch(error => {
+        //             console.log(error);
+        //     });
+        // }
+    </Script>
+
 </body>
+
 </html>

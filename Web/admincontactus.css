@@ -1,0 +1,166 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+:root {
+    --whitesmoke: whitesmoke;
+    --white: white;
+    --black: black;
+    --yellow: #FFC54D;
+    --green: #53BF9D;
+    --red: crimson;
+    --gradiant: linear-gradient(to right, rgb(0, 0, 0), rgb(53, 51, 51));
+    --gradiant1: linear-gradient(to right, rgb(105, 104, 104), rgb(53, 51, 51));
+}
+
+body {
+    min-width: 600px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "Open sans", sans-serif;
+    color: var(--black);
+    background: var(--whitesmoke);
+    overflow-x: hidden;
+}
+
+#clogo {
+    padding: 0px;
+    margin: 0px;
+    background: url(Image/company\ logo.png);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 10vh;
+    width: 10vw;
+    float: left;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px solid var(--whitesmoke);
+    border-radius: 100%;
+    box-shadow: var(--white) 10px 10px 20px;
+}
+
+.logo {
+    color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bolder;
+    background: var(--gradiant);
+    display: flex;
+}
+
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+#res {
+    text-align: right;
+    font-size: 25px;
+    flex: 1;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+#companyname {
+    flex: 1;
+    font-size: 6vw;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+
+/* COVD name animation */
+
+#companyname {
+    background: linear-gradient(to right, rgb(35, 212, 53), #e20d0d 90%, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: Gradiant 3s linear infinite;
+}
+
+@keyframes Gradiant {
+    0% {
+        background-position: 0% 75%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 70%;
+    }
+}
+
+
+/* desktop screen size */
+
+@media screen and (min-width:830px) {
+    .logo {
+        width: 100%;
+        padding-right: 50px;
+    }
+}
+
+
+/* mobile screen size */
+
+@media screen and (max-width:830px) {
+    #companyname {
+        margin-left: 20px;
+        margin-top: -20px;
+        font-weight: bolder;
+        font-size: 10vw;
+    }
+    .logo {
+        width: 100%;
+    }
+}
+
+
+
+
+/* contact stylings */
+.main {
+    width: 100%;
+    height: 86vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: url(Image/contactback2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.contact{
+    flex: 1;
+    display: grid;
+    align-content: center;
+    text-align: center;
+    font-size: 4vw;
+    color: var(--white);
+    align-content: space-evenly;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.contact p i{
+    margin-right: 20px;
+}
+.social a i{
+    font-size: 5vw;
+    margin-right: 30px;
+    color: var(--white);
+}
+.social a i:hover{
+    color: var(--red);
+    /* box-shadow: 0 0 15px var(--red); */
+    text-shadow: 0 0 20px var(--white),
+    0 0 50px var(--white);
+}

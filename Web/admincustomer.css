@@ -1,0 +1,375 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+:root {
+    --whitesmoke: whitesmoke;
+    --white: white;
+    --black: black;
+    --yellow: #FFC54D;
+    --green: #53BF9D;
+    --red: crimson;
+    --gradiant: linear-gradient(to right, rgb(0, 0, 0), rgb(53, 51, 51));
+    --gradiant1: linear-gradient(to right, rgb(105, 104, 104), rgb(53, 51, 51));
+}
+
+body {
+    min-width: 600px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "Open sans", sans-serif;
+    color: var(--black);
+    background: var(--whitesmoke);
+    overflow-x: hidden;
+}
+
+#clogo {
+    padding: 0px;
+    margin: 0px;
+    background: url(Image/company\ logo.png);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 10vh;
+    width: 10vw;
+    float: left;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px solid var(--whitesmoke);
+    border-radius: 100%;
+    box-shadow: var(--white) 10px 10px 20px;
+}
+
+.logo {
+    color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    font-size: 20px;
+    font-weight: bolder;
+    background: var(--gradiant);
+    display: flex;
+}
+
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+#res {
+    text-align: right;
+    font-size: 25px;
+    flex: 1;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+#companyname {
+    flex: 1;
+    font-size: 6vw;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+
+/* COVD name animation */
+
+#companyname {
+    background: linear-gradient(to right, rgb(35, 212, 53), #e20d0d 90%, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: Gradiant 3s linear infinite;
+}
+
+@keyframes Gradiant {
+    0% {
+        background-position: 0% 75%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 70%;
+    }
+}
+
+
+/* desktop screen size */
+
+@media screen and (min-width:830px) {
+    .logo {
+        width: 100%;
+        padding-right: 50px;
+    }
+}
+
+
+/* mobile screen size */
+
+@media screen and (max-width:830px) {
+    #companyname {
+        margin-left: 20px;
+        margin-top: -20px;
+        font-weight: bolder;
+        font-size: 10vw;
+    }
+    .logo {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(7, 7, 7, 0.2)),url(Image/paymentback.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tablecontainer{
+    flex: 1;
+    /* background-color: var(--whitesmoke); */
+}
+
+.vimg{
+    flex: 1;
+    /* background-color: black; */
+}
+.table{
+    width: 80%;
+    height: 70%;
+    background:linear-gradient(rgba(118, 117, 117, 0.5),rgba(39, 38, 38, 0.5));
+    margin-left: 10%;
+    margin-top: 2%;
+    border-radius: 50px;
+}
+
+.table table{
+    width: 100%;
+    color: var(--white);
+    background-color: black;
+    text-align: center;
+    font-size: 1vw;
+    cursor: pointer;
+    border: 4px solid black;
+    row-gap: 20px;
+    /* border-radius: 50px; */
+}
+.table table tr td{
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    font-size: 1.5vw;
+}
+
+#desgin td{
+    font-size: 2vw;
+    border: 0px;
+    border-bottom: 4px solid white;
+    border-radius: 50px;
+}
+.search{
+    margin-top: 5vh;
+    margin-left: 6vw;
+    margin-bottom: 0;
+    width: 75%;
+    height: 6%;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: all 1s;
+}
+#searchtext{
+    width: 87%;
+    font-size: 2vw;
+    padding: 8px;
+    border-radius: 50px;
+    background: transparent;
+    display: none;
+    transition: all 5s;
+}
+.searchbox{
+    color: white;
+}
+#searchbtn{
+    height: 100%;
+    padding: 20px;
+    width: 5%;
+    font-size: 1.5vw;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(rgba(52, 52, 52, 0.5),rgba(251, 250, 250, 0.5));
+    
+}
+.tablecontainer:hover{
+    cursor: pointer;
+}
+.search:hover #searchtext{
+    display: inline-block;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+    box-shadow: 0 0 15px var(--green),
+    0 0 30px var(--green);
+}
+
+.search:hover #searchbtn{
+    margin-top: -100px;
+    float: right;
+    background: linear-gradient(rgba(252, 3, 3, 0.5),rgba(232, 228, 228, 0.5));
+    font-weight:bold;
+    box-shadow:0 0 15px aquamarine,
+    0 0 30px aquamarine;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.buttons button{
+    font-size: 2vw;
+    width: 20%;
+    padding: 20px;
+    margin: 20px;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+    border-radius: 50px;
+    border: 3px solid white;
+    color: var(--white);
+    font-weight: bolder;
+}
+.intext{
+    width: 20%;
+    font-size: 1.5vw;
+    padding: 20px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+    border-radius: 50px;
+    color:var(--white);
+    border: 3px solid white;
+    font-weight: bolder;
+}
+.buttons button:hover{
+    box-shadow: 2px 2px 25px aqua,
+    5px 5px 25px blue;
+    border: 0;
+}
+.intext:hover{
+    box-shadow: 2px 2px 25px aqua,
+    5px 5px 25px blue;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* mobile view style */
+@media screen and (max-width:1200px) {
+    
+    .table{
+        width: 90%;
+        height: 50%;
+        background:linear-gradient(rgba(254, 253, 253, 0.5),rgba(255, 254, 254, 0.5));
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+    
+    #searchbtn{
+        height: 50%;
+        padding: 10px;
+        width: 5%;
+        font-size: 1.5vw;
+        text-align: center;
+        border-radius: 50%;
+        background: linear-gradient(rgba(52, 52, 52, 0.5),rgba(251, 250, 250, 0.5));
+    }
+    .search{
+        margin-left: 8vh;
+
+    }
+    .table table tr td{
+        border-bottom: 4px solid white;
+        border-right: 4px solid white;
+        border-left: 4px solid white;
+        font-size: 2vw;
+    }
+    
+    #desgin td{
+        font-size: 3vw;
+        border: 0px;
+        border-bottom: 4px solid white;
+    }
+    
+    .buttons button{
+        margin-bottom: 50px;
+    }
+    .intext{
+        display: grid;
+        width: 50%;
+        font-size: 2vw;
+        padding: 20px;
+        margin-left: 150px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+        border-radius: 50px;
+        color:var(--white);
+        border: 3px solid white;
+        font-weight: bolder;
+    }
+    .error{
+        color: red;
+        font-size: 2vw;
+        font-weight: bolder;
+        text-align: center;
+    }
+    .error1{
+        color: red;
+        font-size: 2vw;
+        font-weight: bolder;
+        text-align: center;
+    }
+}
+
+
+
+.error{
+    color: red;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    text-align: center;
+}
+.error1{
+    color: red;
+    font-size: 1vw;
+    font-weight: bolder;
+    text-align: center;
+}
