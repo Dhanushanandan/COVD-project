@@ -28,15 +28,15 @@
 
         <div class="slider" id="slider">
             <div class="heading">Menu</div>
-            <button class="active" id="btn" onclick="loadpage()"><i class="fa-solid fa-house"></i><span
+            <button class="active" id="btn"><i class="fa-solid fa-house"></i><span
                     id="text">Dashboard</span></button>
-            <button class="active" id="btn1" onclick="loadpage()"><i class="fa-solid fa-id-card"></i></i><span
+            <button class="active" id="btn1"><i class="fa-solid fa-id-card"></i></i><span
                     id="text">Profile</span></button>
-            <button class="active" id="btn2" onclick="loadpage()"><i class="fa-solid fa-compass-drafting"></i><span
+            <button class="active" id="btn2"><i class="fa-solid fa-compass-drafting"></i><span
                     id="text">Design</span></button>
-            <button class="active" id="btn3" onclick="loadpage()"><i class="fa-regular fa-credit-card"></i></i><span
+            <button class="active" id="btn3"><i class="fa-regular fa-credit-card"></i></i><span
                     id="text">Payments</span></button>
-            <button class="active" id="btn4" onclick="loadpage()"><i class="fa-solid fa-phone-volume"></i><span
+            <button class="active" id="btn4"><i class="fa-solid fa-phone-volume"></i><span
                     id="text">Contact Us</span></button>
 
 
@@ -70,88 +70,95 @@
     <!-- load html page in a div -->
     <Script>
 
-        $page = "";
+        // $page = "";
         const button = document.getElementById('btn');
         const button1 = document.getElementById('btn1');
         const button2 = document.getElementById('btn2');
         const button3 = document.getElementById('btn3');
         const button4 = document.getElementById('btn4');
+        const box = document.getElementById('pagebody');
 
 
 
         //dashbaord loard time view page
-        $page = 'customerHome.html';
-        loadPage();
+        // $page = 'customerHome.html';
+        // loadPage();
         document.getElementById("check").checked = false;
+        box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerHome.html"></Object>';
 
 
         // load dashboard
         button.addEventListener('click', () => {
-            $page = 'customerHome.html';
-            loadPage();
+            // $page = 'customerHome.html';
+            // loadPage();
             document.getElementById("check").checked = false;
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerHome.html"></Object>';
         });
         // load profile
         button1.addEventListener('click', () => {
             
-            $page = 'customerprofile.html';
-            loadPage();
+            // $page = 'customerprofile.html';
+            // loadPage();
             document.getElementById("check").checked = false;
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerprofile.html"></Object>';
         
             //load the script
-            var scriptelement=document.createElement('script');
-            scriptelement.id='currentscript';
-            scriptelement.src='profilevalidation.js';
-            document.head.appendChild(scriptelement);
+            // var scriptelement=document.createElement('script');
+            // scriptelement.id='currentscript';
+            // scriptelement.src='profilevalidation.js';
+            // document.head.appendChild(scriptelement);
         });
 
         //load Design
         button2.addEventListener('click', () => {
-            $page = 'customerdesgin.html';
-            loadPage();
+            // $page = 'customerdesgin.html';
+            // loadPage();
             document.getElementById("check").checked = false;
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerdesgin.html"></Object>';
 
             //load the script
-            var scriptelement=document.createElement('script');
-            scriptelement.id='currentscript';
-            scriptelement.src='searchvalidation.js';
-            document.head.appendChild(scriptelement);
+            // var scriptelement=document.createElement('script');
+            // scriptelement.id='currentscript';
+            // scriptelement.src='searchvalidation.js';
+            // document.head.appendChild(scriptelement);
         });
 
         // load payments
         button3.addEventListener('click', () => {
-            $page = 'customerpayments.html';
-            loadPage();
+            // $page = 'customerpayments.html';
+            // loadPage();
             document.getElementById("check").checked = false;
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerpayments.html"></Object>';
 
 
             //load the script
-            var scriptelement=document.createElement('script');
-            scriptelement.id='currentscript';
-            scriptelement.src='searchvalidation.js';
-            document.head.appendChild(scriptelement);
+            // var scriptelement=document.createElement('script');
+            // scriptelement.id='currentscript';
+            // scriptelement.src='searchvalidation.js';
+            // document.head.appendChild(scriptelement);
         });
 
         // load contact us
         button4.addEventListener('click', () => {
-            $page = 'customerContact.html';
-            loadPage();
+            // $page = 'customerContact.html';
+            // loadPage();
             document.getElementById("check").checked = false;
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerContact.html"></Object>';
         });
 
         //loading fuction inside a method common type
-        function loadPage() {
-            const box = document.getElementById('pagebody');
+        // function loadPage() {
+        //     const box = document.getElementById('pagebody');
 
-            fetch($page)
-                .then(response => response.text())
-                .then(html => {
-                    box.innerHTML = html;
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-        }
+        //     fetch($page)
+        //         .then(response => response.text())
+        //         .then(html => {
+        //             box.innerHTML = html;
+        //         })
+        //         .catch(error => {
+        //             console.log(error);
+        //         });
+        // }
 
 
 

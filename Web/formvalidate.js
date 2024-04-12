@@ -1,5 +1,3 @@
-
-
 //get the id in login form
 const loginform=document.querySelector('#Home');
 const loginemail=document.querySelector('#emailtext');
@@ -18,19 +16,22 @@ const registerContact=document.querySelector('#contacttext');
 
 
 
-
-
 //while login form submitting
 loginform.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    ValidateInputs();
+
+    //check wether if any occure form will not submit,Return true or false
+    if(!ValidateInputs()){
+        e.preventDefault();
+    }
 })
 
-//register form submitting
+// //register form submitting
 registerform.addEventListener('submit',(e1)=>{
-    e1.preventDefault();
-    RegisterValidation();
-})
+   
+    if(!RegisterValidation()){
+        e1.preventDefault();
+    }
+});
 
 
 
@@ -39,41 +40,53 @@ registerform.addEventListener('submit',(e1)=>{
 //validating function login form
 function ValidateInputs(){
     //trim use to remove extra spaces if user given
+    let valid=true;
 
     if(loginemail.value.trim() ===''){
         setError(loginemail,'Email is Required...');
+        valid=false;
     }else if(!validateEmail(loginemail.value.trim())){
         setError(loginemail,'Please Enter a Valid Email!!!');
+        valid=false;
     }else{
         setSuccess(loginemail);
     }
 
     if(loginpass.value.trim() ===''){
         setError(loginpass,'Password Required...')
+        valid=false;
     }else if(loginpass.value.trim().length<8){
         setError(loginpass,'Password must be atleast 8 character!!!')
+        valid=false;
     }else{
         setSuccess(loginpass)
     }
+
+    return valid;
 }
 
 
 
 //Validation fuction register form
 function RegisterValidation(){
+    let valid=true;
 
     if(registeremail.value.trim() ===''){
         setError(registeremail,'Email is Required...');
+        valid=false;
     }else if(!validateEmail1(registeremail.value.trim())){
         setError(registeremail,'Please Enter a Valid Email!!!');
+        valid=false;
     }else{
         setSuccess(registeremail);
     }
 
     if(registerpass.value.trim() ===''){
         setError(registerpass,'Password Required...')
+        valid=false;
     }else if(registerpass.value.trim().length<8){
         setError(registerpass,'Password must be atleast 8 character!!!')
+        valid=false;
     }else{
         setSuccess(registerpass)
     }
@@ -81,6 +94,7 @@ function RegisterValidation(){
 
     if(registerName.value.trim() === ''){
         setError(registerName,'Name is Required...')
+        valid=false;
     }else{
         setSuccess(registerName)
     }
@@ -90,15 +104,18 @@ function RegisterValidation(){
 
     if(registerContact.value.trim() === ''){
         setError(registerContact,'Contact Number is Required...')
+        valid=false;
     }else if(registerContact.value.trim().length<10){
         setError(registerContact,'Contact Number must be 10 digits')
+        valid=false;
     }else if(registerContact.value.trim().length>10){
         setError(registerContact,'Contact Number must be 10 digits')
+        valid=false;
     }else{
          setSuccess(registerContact);
     }
 
-
+    return valid;
 
     // else if(Number.isInteger(registerContact.value)){
     //     setError(registerContact,'Contact Number must be Only Numbers')

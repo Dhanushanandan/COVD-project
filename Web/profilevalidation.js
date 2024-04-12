@@ -10,10 +10,12 @@
   const registerContact = document.querySelector('#contacttext');
 
   //profile form submitting
-  registerform.addEventListener('submit', (e1) => {
-    e1.preventDefault();
-    RegisterValidation();
-  })
+  registerform.addEventListener('submit',(e1)=>{
+   
+    if(!RegisterValidation()){
+        e1.preventDefault();
+    }
+});
 
 
 
@@ -21,42 +23,53 @@
   //Validation fuction profile form
   function RegisterValidation() {
 
-    if (registeremail.value.trim() === '') {
-      setError(registeremail, 'Email is Required...');
-    } else if (!validateEmail1(registeremail.value.trim())) {
-      setError(registeremail, 'Please Enter a Valid Email!!!');
-    } else {
-      setSuccess(registeremail);
+    let valid=true;
+
+    if(registeremail.value.trim() ===''){
+        setError(registeremail,'Email is Required...');
+        valid=false;
+    }else if(!validateEmail1(registeremail.value.trim())){
+        setError(registeremail,'Please Enter a Valid Email!!!');
+        valid=false;
+    }else{
+        setSuccess(registeremail);
     }
 
-    if (registerpass.value.trim() === '') {
-      setError(registerpass, 'Password Required...')
-    } else if (registerpass.value.trim().length < 8) {
-      setError(registerpass, 'Password must be atleast 8 character!!!')
-    } else {
-      setSuccess(registerpass)
+    if(registerpass.value.trim() ===''){
+        setError(registerpass,'Password Required...')
+        valid=false;
+    }else if(registerpass.value.trim().length<8){
+        setError(registerpass,'Password must be atleast 8 character!!!')
+        valid=false;
+    }else{
+        setSuccess(registerpass)
     }
 
 
-    if (registerName.value.trim() === '') {
-      setError(registerName, 'Name is Required...')
-    } else {
-      setSuccess(registerName)
+    if(registerName.value.trim() === ''){
+        setError(registerName,'Name is Required...')
+        valid=false;
+    }else{
+        setSuccess(registerName)
     }
 
+    
 
 
-
-    if (registerContact.value.trim() === '') {
-      setError(registerContact, 'Contact Number is Required...')
-    } else if (registerContact.value.trim().length < 10) {
-      setError(registerContact, 'Contact Number must be 10 digits')
-    } else if (registerContact.value.trim().length > 10) {
-      setError(registerContact, 'Contact Number must be 10 digits')
-    } else {
-      setSuccess(registerContact);
+    if(registerContact.value.trim() === ''){
+        setError(registerContact,'Contact Number is Required...')
+        valid=false;
+    }else if(registerContact.value.trim().length<10){
+        setError(registerContact,'Contact Number must be 10 digits')
+        valid=false;
+    }else if(registerContact.value.trim().length>10){
+        setError(registerContact,'Contact Number must be 10 digits')
+        valid=false;
+    }else{
+         setSuccess(registerContact);
     }
 
+    return valid;
 
 
     // else if(Number.isInteger(registerContact.value)){

@@ -38,7 +38,7 @@
     <input type="checkbox" id="show">
     <!-- <label for="show" class="show-btn" id="loginbtn"><i class="fa-regular fa-circle-user"></i>login</label> -->
     <div class="contain" id="contain">
-      <form action="" class="f" name="Home" id="Home">
+      <form action="register.php" class="f" name="Home" id="Home" method="POST">
         <div><label for="show" id="closebtn" class="closebtn" title="close"><i class="fa fa-times"
               aria-hidden="true"></i></label></div>
         <div id="logincontainer">
@@ -50,10 +50,10 @@
           </div>
           <div id="passwordcontainer" class="data">
             <label for="" id="passwordlabel" class="label3"><i class="fa-solid fa-lock"></i>Passsword</label>
-            <input type="password" id="passwordtext" placeholder="********">
+            <input type="password" id="passwordtext" placeholder="********" name="passwordtext">
             <div class="error"></div>
           </div>
-          <button id="loginbutton" type="submit" value="submit">Login</button>
+          <button id="loginbutton" type="submit" value="submit" name="loginbutton">Login</button>
           <div id="registerlabel" class="llabel">Don't have an Account?<span id="registerspan" onclick="hide()">Sign
               up</span></div>
         </div>
@@ -61,7 +61,7 @@
 
 
       <!-- Register Form -->
-      <form action="" class="registerform" name="registerform" id="registerform">
+      <form action="register.php" class="registerform" name="registerform" id="registerform" method="POST">
         <!-- <div><label for="show" id="closebtn" class="closebtn" title="close"><i class="fa fa-times" aria-hidden="true"></i></label></div> -->
         <!-- <div><label for="show1" id="closebtn1" class="closebtn1" title="close1" onclick="close1()"><i class="fa fa-times" aria-hidden="true"></i></label></div> -->
 
@@ -69,29 +69,28 @@
           <h1>Register</h1>
           <div id="regemailcontainer" class="regemailcontainer">
             <label for="" id="reemaillabel" class="registerlabel"><i class="fa-solid fa-envelope"></i>Email</label>
-            <input type="text" id="reemailtext" class="regtextbox" placeholder="asd@gmail.com">
+            <input type="text" id="reemailtext" class="regtextbox" placeholder="asd@gmail.com" name="reemailtext">
             <div class="error"></div>
           </div>
           <div id="Namecontainer" class="Namecontainer">
             <label for="" id="Namelabel" class="registerlabel"><i class="fa-solid fa-user"></i>User Name</label>
-            <input type="text" id="Nametext" class="regtextbox" placeholder="asd">
+            <input type="text" id="Nametext" class="regtextbox" placeholder="asd" name="Nametext">
             <div class="error"></div>
           </div>
           <div id="repasswordcontainer" class="repasswordcontainer">
             <label for="" id="repasswordlabel" class="registerlabel"><i class="fa-solid fa-lock"></i>Passsword</label>
-            <input type="password" id="repasswordtext" class="regtextbox" placeholder="********">
+            <input type="password" id="repasswordtext" class="regtextbox" placeholder="********" name="repasswordtext">
             <div class="error"></div>
           </div>
           <div id="contactcontainer" class="contactcontainer">
             <label for="" id="contactlabel" class="registerlabel"><i class="fa-solid fa-mobile-screen"></i>Contact
               number</label>
-            <input type="text" id="contacttext" class="regtextbox" placeholder="07********">
+            <input type="text" id="contacttext" class="regtextbox" placeholder="07********" name="contacttext">
             <div class="error"></div>
           </div>
-          <button id="registerbutton" type="submit" value="submit">Register</button>
+          <button id="registerbutton" type="submit" value="submit" name="registerbutton">Register</button>
         </div>
         <div id="loginlabel2">Already have an Account?<span id="loginlabel2" onclick="hide1()">Login</span></div>
-
       </form>
     </div>
   </div>
@@ -226,6 +225,22 @@
         b = 1;
       }
     }
+
+
+
+
+
+    // //textbox exit validate
+    // const loginemail = document.querySelector('#emailtext');
+    // const loginpass = document.querySelector('#passwordtext');
+
+    // loginemail.addEventListener('blur', function () {
+      
+    // });
+    // loginpass.addEventListener('blur', function () {
+    //   alert("User exited");
+    // });
+
   </script>
 
   <script src="formvalidate.js"></script>

@@ -29,17 +29,17 @@
         <div class="slider" id="slider">
             <div class="heading">Menu</div>
 
-            <button class="active" id="btn" onclick="loadpage()"><i class="fa-solid fa-house"></i><span
+            <button class="active" id="btn"><i class="fa-solid fa-house"></i><span
                     id="text">Dashboard</span></button>
-            <button class="active" id="btn1" onclick="loadpage()"><i class="fa-solid fa-id-card"></i></i><span
+            <button class="active" id="btn1"><i class="fa-solid fa-id-card"></i></i><span
                     id="text">Profile</span></button>
-            <button class="active" id="btn2" onclick="loadpage()"><i class="fa-solid fa-compass-drafting"></i><span
+            <button class="active" id="btn2"><i class="fa-solid fa-compass-drafting"></i><span
                     id="text">Design</span></button>
-            <button class="active" id="btn3" onclick="loadpage()"><i class="fa-regular fa-credit-card"></i></i><span
+            <button class="active" id="btn3"><i class="fa-regular fa-credit-card"></i></i><span
                     id="text">Payments</span></button>
-            <button class="active" id="btn4" onclick="loadpage()"><i class="fa-solid fa-person"></i><span
+            <button class="active" id="btn4"><i class="fa-solid fa-person"></i><span
                     id="text">Customer</span></button>
-            <button class="active" id="btn5" onclick="loadpage()"><i class="fa-solid fa-phone-volume"></i><span
+            <button class="active" id="btn5"><i class="fa-solid fa-phone-volume"></i><span
                     id="text">Contact Us</span></button>
 
 
@@ -75,7 +75,14 @@
 
     <!-- load html page in a div -->
     <Script>
-        $page = "";
+
+
+/*fetch method is working but the js file loading have an issue(it can be fix through the below code) and while 
+loading page having an issue and validating a page after the js file not closing so another side js file connot access
+ the current page js file so this method having a trobule it's an advance method.for an alternative method is used */
+
+ 
+        var page = "";
         const button = document.getElementById('btn');
         const box = document.getElementById('pagebody');
         const button1 = document.getElementById('btn1');
@@ -87,29 +94,39 @@
 
 
         //page load time display page
-        $page = 'adminHome.html';
-        loadPage();
-        document.getElementById("check").checked = false;
+        // page = 'adminHome.html';
+        // loadPage();
+
+        //close the menu bar after button clicked
+         document.getElementById("check").checked = false;
+        box.innerHTML='<Object width="100%" height="100%" type="text/html" data="adminHome.html"></Object>';
 
         // load dashbaord
         button.addEventListener('click', () => {
-            $page = 'adminHome.html';
-            loadPage();
-            document.getElementById("check").checked = false;
+            // page = 'adminHome.html';
+            // loadPage();
+
+            //close the menu bar after button clicked
+             document.getElementById("check").checked = false;
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="adminHome.html"></Object>';
+            
         });
 
 
         // load profile
         button1.addEventListener('click', () => {
-            $page = 'adminprofile.html';
-            loadPage();
+            // page = 'adminprofile.html';
+            // loadPage();
+
+            //close the menu bar after button clicked
             document.getElementById("check").checked = false;
 
             //load the script
-            var scriptelement = document.createElement('script');
-            scriptelement.id = 'currentscript';
-            scriptelement.src = 'profilevalidation.js';
-            document.head.appendChild(scriptelement);
+            // var scriptelement = document.createElement('script');
+            // scriptelement.id = 'currentscript';
+            // scriptelement.src = 'profilevalidation.js';
+            // document.head.appendChild(scriptelement);
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="adminprofile.html"></Object>';
         });
 
 
@@ -117,81 +134,77 @@
 
         //load Design
         button2.addEventListener('click', () => {
-            $page = 'admindesign.html';
-            loadPage();
-            document.getElementById("check").checked = false;
+            // page = 'admindesign.html';
+            // loadPage();
+
+            //close the menu bar after button clicked
+             document.getElementById("check").checked = false;
 
             //load the script
-            var scriptelement = document.createElement('script');
-            scriptelement.id = 'currentscript';
-            scriptelement.src = 'admindesign.js';
-            document.head.appendChild(scriptelement);
+            // var scriptelement = document.createElement('script');
+            // scriptelement.id = 'currentscript';
+            // scriptelement.src = 'admindesign.js';
+            // document.head.appendChild(scriptelement);
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="admindesign.html"></Object>';
         });
 
         // load payments
         button3.addEventListener('click', () => {
-            $page = 'adminpayment.html';
-            loadPage();
-            document.getElementById("check").checked = false;
+            // page = 'adminpayment.html';
+            // loadPage();
+
+            //close the menu bar after button clicked
+             document.getElementById("check").checked = false;
 
             //load the script
-            var scriptelement = document.createElement('script');
-            scriptelement.id = 'currentscript';
-            scriptelement.src = 'adminpayment.js';
-            document.head.appendChild(scriptelement);
+            // var scriptelement = document.createElement('script');
+            // scriptelement.id = 'currentscript';
+            // scriptelement.src = 'adminpayment.js';
+            // document.head.appendChild(scriptelement);
 
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="adminpayment.html"></Object>';
         });
 
         // load customer
         button4.addEventListener('click', () => {
-            $page = 'admincustomer.html';
-            loadPage();
-            document.getElementById("check").checked = false;
+            // page = 'admincustomer.html';
+            // loadPage();
+
+            //close the menu bar after button clicked
+         document.getElementById("check").checked = false;
 
 
             //load the script
-            var scriptelement = document.createElement('script');
-            scriptelement.id = 'currentscript';
-            scriptelement.src = 'admincustomervalid.js';
-            document.head.appendChild(scriptelement);
+            // var scriptelement = document.createElement('script');
+            // scriptelement.id = 'currentscript';
+            // scriptelement.src = 'admincustomervalid.js';
+            // document.head.appendChild(scriptelement);
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="admincustomer.html"></Object>';
         });
 
 
         // load contact us
         button5.addEventListener('click', () => {
-            $page = 'admincontactus.html';
-            loadPage();
+            // page = 'admincontactus.html';
+            // loadPage();
+            
+            //close the menu bar after button clicked
             document.getElementById("check").checked = false;
+            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="admincontactus.html"></Object>';
         });
 
-        function loadPage() {
-            fetch($page)
-                .then(response => response.text())
-                .then(html => {
-                    box.innerHTML = html;
-                })
-                .catch(error => {
-                    console.log(error);
-                });
-        }
-
-
-
-
-
-
-        //     function loadPage2() {
-
-
-        //         fetch($page)
-        //              .then(response => response.text())
-        //              .then(html => {
-        //               box.innerHTML = html;
-        //          })
-        //     .catch(error => {
+        // function loadPage() {
+        //     fetch(page)
+        //         .then(response => response.text())
+        //         .then(html => {
+        //             box.innerHTML = html;
+        //         })
+        //         .catch(error => {
         //             console.log(error);
-        //     });
+        //         });
         // }
+
+
     </Script>
 
 </body>
