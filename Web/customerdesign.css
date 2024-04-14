@@ -257,6 +257,19 @@ body {
     box-shadow: 20px 20px 40px var(--black);
 }
 
+#View{
+        font-size: 2vw;
+        width: 20%;
+        padding: 20px;
+        margin: 20px;
+        background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5));
+        border-radius: 50px;
+        border: 3px solid white;
+        color: var(--white);
+        font-weight: bolder;
+    
+}
+
 
 /* mobile view style */
 @media screen and (max-width:1200px) {
@@ -315,6 +328,7 @@ body {
         border: 0px;
         border-bottom: 4px solid white;
     }
+
 }
 
 
@@ -322,7 +336,7 @@ body {
 
 
 /*validation css js*/
-.search .error{
+.error{
     color: red;
     font-size: 1.5vw;
     font-weight: bolder;

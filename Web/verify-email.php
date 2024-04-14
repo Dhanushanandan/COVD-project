@@ -14,12 +14,20 @@ if (isset($_GET["token"])) {
         //update the status fiel to activate the account
         $query1 = "UPDATE Customer_details SET status=1 Where token='$token'";
         mysqli_query($con, $query1);
-        echo "Verification Success";
+        echo '<script> 
+        window.location.href ="index.html";
+        alert("Verification Complete");
+   </script>';
     } else {
-        echo "verification failed";
+        echo '<script> 
+        window.location.href ="index.html";
+        alert("Verification Faild");
+   </script>';
     }
 } else {
-    echo "NOT allowed";
+    echo '<script> 
+        alert("Not Allowed");
+   </script>';
 }
 
 

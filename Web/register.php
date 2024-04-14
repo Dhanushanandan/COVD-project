@@ -56,14 +56,15 @@ function sendemail_verify($email, $verify_token)
     <body style='margin: 0; padding: 0;border: 0;'>
     <div class='main'>
         <div class='contain' style='display: grid;justify-content: center; padding: 10vh;'>
-            <div><img src='/Image/Emailverify.jpeg' alt='Verification-Image' style='border-radius: 50%;''></div>
+            <div id='pagebody'><img src=''></div>
             <div style='font-size: 2vw; text-align: center;'><h1><b>Verify Your Email Address...</b></h1></div>
             <div style='font-size: 1.5vw; text-align: center'><p><h3>You've entered <b>$email</b> as the email address for your account</h3></p></div>
             <div style='font-size: 1.5vw; text-align: center '><h3><p>Please Verify this email address by click below</p></h3></div>
             <div><a href='http://localhost/web1/web/verify-email.php?token=$verify_token'' style='font-size: 2vw; margin-left: 40%;'><b>Click Here.....</b></a></div>
         </div>
+        
     </div>
-</body>
+    </body>
     ";
 
     // $mail->addEmbeddedImage(dirname(__FILE__).'/Image/Emailverify.jpeg','Email Verify');
@@ -177,7 +178,7 @@ if (isset($_POST["loginbutton"])) {
                          window.location.href ="Admindash.html";
                         alert("Successfully Login");
                     </script>';
-                    // header("Location:Admindash.html");
+                // header("Location:Admindash.html");
             } else {
                 // header("Location:customerdash.html");
                 echo '<script>
@@ -204,80 +205,5 @@ if (isset($_POST["loginbutton"])) {
     mysqli_close($con);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//update profile
-if (isset($_POST['up-btn'])) {
-    //start session to accept the login email
-    session_start();
-    $uemail = $_POST['uemail'];
-    $uname = $_POST['uname'];
-    $upass = $_POST['upass'];
-    $ucontact = $_POST['ucontact'];
-    //retrive the login email
-    $loginEmail = isset($_SESSION['loginemail']) ? $_SESSION['loginemail'] : '';
-
-
-    $usql = "UPDATE Customer_details SET name='$uname', pass='$upass', contact='$ucontact' Where email='$uemail'";
-
-
-    // $checkmail = "SELECT * from Customer_details where email='$uemail'";
-    // //Execute query
-    // $result1 = mysqli_query($con, $checkmail);
-
-    //checking the match
-    if ($uemail === $loginEmail) {
-        //checking the values added or not in database
-        if (mysqli_query($con, $usql)) {
-            echo '
-       <script> 
-            window.location.href ="Admindash.html";
-            alert("Successfully Updated...");
-       </script>';
-        } else {
-            echo '
-       <script> 
-            window.location.href ="Admindash.html";
-            alert("Update failed..Try again!!!");
-       </script>';
-        }
-
-    } else {
-        echo '<script> 
-        window.location.href ="Admindash.html";
-        alert("Invalid Email.Email cannot be Change.Try again!!!");
-   </script>';
-    }
-
-    mysqli_close($con);
-}
 
 ?>
