@@ -197,7 +197,7 @@ if (isset($_POST["loginbutton"])) {
     } else {
         echo '
        <script> 
-            window.location.href ="index.html";
+            window.location.href ="indexlogin.php";
             alert("Login Failed:Incorrect User Name OR Password");
        </script>';
     }

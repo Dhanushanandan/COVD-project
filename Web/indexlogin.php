@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- title logo -->
+  <link rel="icon" href="Image/company logo.png">
+  <title>COVD Login</title>
     <!-- Icons link import -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
-<body>
-    <style>
-        :root{
+
+<style>
+    :root{
     --whitesmoke:whitesmoke;
     --white:white;
     --black:black;
@@ -21,87 +23,54 @@
     --gradiant:linear-gradient(to right,rgb(0, 0, 0),rgb(53, 51, 51));
     --gradiant1:linear-gradient(to right,rgb(105, 104, 104),rgb(53, 51, 51));
 }
-html{
-    /*scroll the window smoothly to bottom*/
-    scroll-behavior: smooth;
-}
-body{
-    min-width: 600px;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    font-family: "Open sans", sans-serif;
-    color: var(--black);
-    background:var(--gradiant);
-    overflow-x:hidden ;
-}
 
-/* animation register and login */
-@keyframes slidein{
-    0%{
-        transform: translateX(-50%);
-    }50%{
-        transform: translateX(0);
+    body{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,.7),rgba(7, 7, 7, 0.2)),url("Image/CSOTY_Header.png");
+        /* background: url("Image/CSOTY_Header.png"), rgba(0, 0, 0, 0); */
+        /* background-color: black; */
+        background-size: cover;
+        background-position: center;
+        overflow-y: hidden;
     }
-}
-
-
-#Home,#contain{
-    animation: slidein 2s;
-}
-@keyframes slidein1{
-    0%{
-        transform: translateX(50%);
-    }50%{
-        transform: translateX(0);
+    #main{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-}
-#registerform{
-    animation: slidein1 2s;
-}
-
-
-
-
-
-
-
-
-/* Login form design */
-
-
-.contain{
-    position: absolute;
-    top: 40%;
-    left: 30%;
-    background:var(--gradiant);
-    height: 50vh;
-    width: 40vw;
-    color:white;
-    border-radius: 40px;
-    border: var(--whitesmoke) solid 2px;
-    transition: .5s;
-    box-shadow: var(--whitesmoke) 0px 0px 10px 5px;
-    /* z-index: 500; */
-}
-
-.show-btn{
-    cursor: pointer;
-}
-
-#logincontainer h1{
-    font-size: 4vw;
+    #contain{
+        
+        height: 70%;
+        width: 30vw;
+        color:white;
+        font-weight: border;
+        border-radius: 40px;
+        /* border: var(--whitesmoke) solid 2px; */
+        transition: .5s;
+        background: rgba(255, 255, 255, 0.06);
+        box-shadow: var(--white) 0px 0px 10px 5px;
+        border-right: rgba(255, 255, 255, 0.6) solid 2px;
+        border-left: rgba(255, 255, 255, 0.6) solid 2px;
+    }
+    #logincontainer h1{
+    font-size: 3vw;
     text-align: center;
-    margin-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 30px;
+    padding-bottom: 10px;
     border-bottom: 5px solid var(--whitesmoke);
     border-radius: 50%;
 }
 .data{
-    font-size: 2vw;
+    font-size: 1.5vw;
     padding: 20px;
     margin: 20px;
+    margin-top: 0;
 }
 .data i{
     margin-right: 10px;
@@ -148,138 +117,28 @@ body{
     border-left: 1px solid rgb(64, 198, 236);
     border-top: 1px solid rgb(8, 162, 224);
 }
-.closebtn i{
-    color: var(--white);
-    font-size: 40px;
-    padding: 10px;
-    display: flex;
-    justify-content: end;
-    margin-top: 10px;
-    margin-right: 10px;
-}
 #registerlabel{
     text-align: center;
     margin-top: 40px;
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 #registerspan{
     padding-left: 5px;
     cursor: pointer;
 }
-
-
-
-
-/* desktop screen size login */
- @media screen and (min-width:830px) {
-    .contain{
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    background:var(--gradiant);
-    height: 80%;
-     width: 40vw;
-    color:white;
-    border-radius: 40px;
-    border: var(--whitesmoke) solid 2px;
-    transition: .5s;
-    box-shadow: var(--whitesmoke) 0px 0px 10px 5px;
-    opacity: .9;
-    /* z-index: 1000; */
-    }
-    #nav1{
-        width: 100%;
-    }
-    .logo{
-        width: 100%;
-    }
-} 
-
-/* mobile screen size login */
- @media screen and (max-width:1200px) {
-    .contain{
-        opacity: .9;
-        text-align: center;
-        position: absolute;
-        top: 45%;
-        left: 30%;
-        background:var(--gradiant);
-        height: 60%;
-        width: 40vw;
-        color:white;
-        border-radius: 40px;
-    border: var(--whitesmoke) solid 2px;
-    transition: .5s;
-    box-shadow: var(--whitesmoke) 0px 0px 10px 5px;
-    /* z-index: 1000; */
-    }
-
-    #logincontainer h1{
-        font-size: 4vw;
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    #loginbutton1{
-        font-size: 2vw;
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 5%;
-        margin-top: 2%;
-        padding: 0px;
-        height: 4vh;
-    }
-    #companyname{
-        margin-left: 20px;
-        margin-top: 20px;
-        font-weight: bolder;
-        font-size: 5vw;
-        
-    }
-    
-    #nav1{
-        width: 100%;
-    }
-    .logo{
-        width: 100%;
-    }
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Register  */
 
 
 
 
 #registercontainer h1{
-    font-size: 4vw;
+    font-size: 3vw;
     text-align: center;
-    margin-top: 30px;
-    padding: 50px;
+    /* margin-top: 30px; */
+    padding: 40px;
     border-bottom: 5px solid var(--whitesmoke);
     border-radius: 50%;
+    margin-top: 0;
 }
 #registercontainer i{
     margin-right: 10px;
@@ -328,7 +187,7 @@ body{
 }
 
 .registerlabel{
-    font-size: 1.8vw;
+    font-size: 1.5vw;
     float: left;
     margin-left: 40px;
 }
@@ -349,200 +208,80 @@ body{
     cursor: pointer;
 }
 
+/* profile validation css js*/
+ .error{
+    color: red;
+    font-size: 1.5vw;
+    font-weight: bolder;
+    text-align: center;
+    /* padding: 10px; */
+}
 
-/* mobile screen size register */
- @media screen and (max-width:830px) {
 
-    #registercontainer h1{
-        font-size: 4vw;
-        text-align: center;margin-top: 30px;
-        padding: 20px;
-    }
-
-    #registerbutton{
-        font-size: 2vw;
+/* Media queries for mobile devices */
+@media screen and (max-width: 767px) {
+    #contain {
         width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 2%;
-        padding: 0px;
-        height: 4vh;
+        height: 75%;
     }
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Image slider animation */
-@keyframes changeImage{
-    0%{
-        background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
+    #logincontainer h1,
+    #registercontainer h1 {
+        font-size: 6vw;
     }
-    25%{
-        background-image: url(Image/628268cc7d20506f6307dab83f843b97.jpg);
+    .data {
+        font-size: 3vw;
+        padding: 3vw;
+        margin: 3vw;
     }
-    50%{
-        background-image: url(Image/195869-nomryjdgor-1699964440.jpg);
+    #emailtext,
+    #passwordtext,
+    #reemailtext,
+    #Nametext,
+    #repasswordtext,
+    #contacttext {
+        font-size: 4vw;
+        padding: 4vw;
+        width: 90%;
     }
-    75%{
-        background-image: url(Image/628268cc7d20506f6307dab83f843b97.jpg);
+    #loginbutton,
+    #registerbutton {
+        font-size: 5vw;
+        width: 70%;
+        padding: 2vw;
+        margin-left: 15vw;
     }
-    100%{
-        background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
+    #registerlabel,
+    #loginlabel2{
+        font-size: 4vw;
+        margin-top: 6vw;
     }
-}
-/* website scroll fade */
-@keyframes fade {
-    0%{
-        opacity: 0;
+    .error{
+        font-size: 15px;
     }
-    100%{
-        opacity: 1;
+    .registerlabel {
+        font-size: 3vw;
     }
-}
-
-/* mobile screen */
-@media screen and (max-width: 810px) {
-    #tag,.img,#pimg,#price{
-        flex: 100%;
-        margin-left: 17vw;
-        margin-top: 2vh;
-        margin-bottom: 10vh;
-        animation: fade linear both;
-        animation-timeline: view();
-        animation-range: entry 50% cover 50%;
-        border-radius: 50px;
+    #reemailtext,#Nametext,#repasswordtext,#contacttext{
+        width: 80%;
     }
-    #pimg{
-        flex: 100%;
-        margin-left: 5vw;
-        margin-right: 5vw;
-        margin-top: 2vh;
-        margin-bottom: 5vh;
-        animation: fade linear both;
-        animation-timeline: view();
-        animation-range: entry 75% cover 50%;
-        border-radius: 50px;
-    }
-    #price{
-        flex: 100%;
-        margin-left: 0px;
-        padding-left: 0px;
-        margin-right: 20vw;
-    }
-    #price p{
-        padding-left: 0px;
-    }
-    #loginbutton1{
-        margin-right: 50px;
-    }
-    #body1{
-        width: 100%;
-    }
-    .header{
-        width: 100%;
-    }
-    #nav1{
-        width: 100%;
-    }
-    .logo{
-        width: 100%;
-    }
+    
 }
 
 
 
+    
+</style>
 
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* login validation css js*/
-.data .error{
-    color: red;
-    font-size: 1.5vw;
-    margin-top: 5px;
-    font-weight: bolder;
-    text-align: center;
-}
-
-/* .success input{
-    border-color: green;
-    background: transparent;
-}
-.data input{
-    border-color:2px solid red;
-    background: transparent;
-} */
-
-
-
-/* register validation css js*/
-.regemailcontainer .error,.Namecontainer .error,.repasswordcontainer .error,.contactcontainer .error{
-    color: red;
-    font-size: 1.5vw;
-    font-weight: bolder;
-    text-align: center;
-    padding: 10px;
-}
-
-/* .success input{
-    border-color: green;
-    background: transparent;
-}
-.regemailcontainer .Namecontainer .repasswordcontainer .contactcontainer input{
-    border-color:2px solid red;
-    background: transparent;
-} */
-    </style>
-
-
-
+<body>
     <!-- Login form -->
-    <div id="main">
-        <input type="checkbox" id="show">
+    <div id="main" class="main">
         <!-- <label for="show" class="show-btn" id="loginbtn"><i class="fa-regular fa-circle-user"></i>login</label> -->
         <div class="contain" id="contain">
             <form action="register.php" class="f" name="Home" id="Home" method="POST">
-                <div><label for="show" id="closebtn" class="closebtn" title="close"><i class="fa fa-times"
-                            aria-hidden="true"></i></label></div>
+                <!-- <div><label for="" id="closebtn" class="closebtn" title="close"><i class="fa fa-times"
+                            aria-hidden="true"></i></label></div> -->
                 <div id="logincontainer">
                     <h1>Login</h1>
                     <div id="emailcontainer" class="data">

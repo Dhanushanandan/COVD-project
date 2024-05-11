@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVD</title>
+    <!-- title logo -->
+    <link rel="icon" href="Image/company logo.png">
+    <title>COVD Customer Page</title>
     <link rel="stylesheet" href="customerstyle.css">
     <!-- Icons link import -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -28,16 +30,16 @@
 
         <div class="slider" id="slider">
             <div class="heading">Menu</div>
-            <button class="active" id="btn"><i class="fa-solid fa-house"></i><span
-                    id="text">Dashboard</span></button>
+            <button class="active" id="btn"><i class="fa-solid fa-house"></i><span id="text">Dashboard</span></button>
             <button class="active" id="btn1"><i class="fa-solid fa-id-card"></i></i><span
                     id="text">Profile</span></button>
             <button class="active" id="btn2"><i class="fa-solid fa-compass-drafting"></i><span
                     id="text">Design</span></button>
             <button class="active" id="btn3"><i class="fa-regular fa-credit-card"></i></i><span
                     id="text">Payments</span></button>
-            <button class="active" id="btn4"><i class="fa-solid fa-phone-volume"></i><span
-                    id="text">Contact Us</span></button>
+            <button class="active" id="btn4"><i class="fa-solid fa-phone-volume"></i><span id="text">Contact
+                    Us</span></button>
+            <button class="active" id="btn5"><i class="fa-solid fa-arrow-right-from-bracket"></i><span id="text">Logout</span></button>
 
 
 
@@ -76,6 +78,7 @@
         const button2 = document.getElementById('btn2');
         const button3 = document.getElementById('btn3');
         const button4 = document.getElementById('btn4');
+        const button5 = document.getElementById('btn5');
         const box = document.getElementById('pagebody');
 
 
@@ -84,7 +87,7 @@
         // $page = 'customerHome.html';
         // loadPage();
         document.getElementById("check").checked = false;
-        box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerHome.html"></Object>';
+        box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="customerHome.html"></Object>';
 
 
         // load dashboard
@@ -92,16 +95,16 @@
             // $page = 'customerHome.html';
             // loadPage();
             document.getElementById("check").checked = false;
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerHome.html"></Object>';
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="customerHome.html"></Object>';
         });
         // load profile
         button1.addEventListener('click', () => {
-            
+
             // $page = 'customerprofile.html';
             // loadPage();
             document.getElementById("check").checked = false;
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerprofile.php"></Object>';
-        
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="customerprofile.php"></Object>';
+
             //load the script
             // var scriptelement=document.createElement('script');
             // scriptelement.id='currentscript';
@@ -114,7 +117,7 @@
             // $page = 'customerdesgin.html';
             // loadPage();
             document.getElementById("check").checked = false;
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerdesgin.php"></Object>';
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="customerdesgin.php"></Object>';
 
             //load the script
             // var scriptelement=document.createElement('script');
@@ -128,7 +131,7 @@
             // $page = 'customerpayments.html';
             // loadPage();
             document.getElementById("check").checked = false;
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerpayments.php"></Object>';
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="customerpayments.php"></Object>';
 
 
             //load the script
@@ -143,8 +146,14 @@
             // $page = 'customerContact.html';
             // loadPage();
             document.getElementById("check").checked = false;
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="customerContact.html"></Object>';
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="customerContact.html"></Object>';
         });
+
+        //logout
+        button5.addEventListener('click', () => {
+            window.location.href="indexlogin.php";
+        });
+        
 
         //loading fuction inside a method common type
         // function loadPage() {

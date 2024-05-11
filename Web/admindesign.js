@@ -35,7 +35,6 @@ const searchbtn=document.querySelector("#searchbtn");
     //     }
     // });
     searchbtn.addEventListener('click',(e1)=>{
-        alert("in1");
         if(!searchfun()){
             e1.preventDefault();
         }
@@ -47,10 +46,9 @@ const searchbtn=document.querySelector("#searchbtn");
 
 function searchfun() {
     let valid=true;
-   alert("In");
     if (searchtext.value.trim() === '') {
-        // setError(searchtext, 'Enter any values to search');
-        alert("Enter a value");
+        setError(searchtext, 'Enter any values to search');
+        // alert("Enter a value");
         valid=false;
     } else {
         setSuccess(searchtext);

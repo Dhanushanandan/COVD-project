@@ -127,7 +127,50 @@ if (isset($_POST['View'])) {
 
 
     <footer></footer>
-    <script src="adminpayment.js"></script>
+    <script >
+        const searchtext = document.querySelector('#searchtext');
+        const searchbtn = document.querySelector("#searchbtn");
+
+        searchbtn.addEventListener('click', (e1) => {
+            if (!searchfun()) {
+                e1.preventDefault();
+            }
+        });
+
+        function searchfun() {
+            let valid = true;
+            if (searchtext.value.trim() === '') {
+                setError(searchtext, 'Enter any values to search');
+                // alert("Enter a value");
+                valid = false;
+            } else {
+                setSuccess(searchtext);
+            }
+            return valid;
+        }
+
+        //error messsage
+        function setError(element, message) {
+            //choose the parent div
+            const data = element.parentElement;
+            const errorelement = data.querySelector('.error');
+
+            errorelement.innerText = message;
+            data.classList.add('error');
+            data.classList.remove('success');
+
+        }
+        //Succcess function
+        function setSuccess(element, message) {
+            const data = element.parentElement;
+            const errorelement = data.querySelector('.error');
+
+            errorelement.innerText = '';
+            data.classList.add('success');
+            data.classList.remove('error');
+        }
+
+    </script>
 </body>
 
 </html>

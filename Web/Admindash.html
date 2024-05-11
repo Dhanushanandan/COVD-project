@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COVD</title>
+    <!-- title logo -->
+    <link rel="icon" href="Image/company logo.png">
+    <title>COVD Admin Page</title>
     <link rel="stylesheet" href="Admindash.css">
     <!-- Icons link import -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -30,18 +31,19 @@
         <div class="slider" id="slider">
             <div class="heading">Menu</div>
 
-            <button class="active" id="btn"><i class="fa-solid fa-house"></i><span
-                    id="text">Dashboard</span></button>
+            <button class="active" id="btn"><i class="fa-solid fa-house"></i><span id="text">Dashboard</span></button>
             <button class="active" id="btn1"><i class="fa-solid fa-id-card"></i></i><span
                     id="text">Profile</span></button>
             <button class="active" id="btn2"><i class="fa-solid fa-compass-drafting"></i><span
                     id="text">Design</span></button>
             <button class="active" id="btn3"><i class="fa-regular fa-credit-card"></i></i><span
                     id="text">Payments</span></button>
-            <button class="active" id="btn4"><i class="fa-solid fa-person"></i><span
-                    id="text">Customer</span></button>
-            <button class="active" id="btn5"><i class="fa-solid fa-phone-volume"></i><span
-                    id="text">Contact Us</span></button>
+            <button class="active" id="btn4"><i class="fa-solid fa-person"></i><span id="text">Customer</span></button>
+            <button class="active" id="btn5"><i class="fa-solid fa-phone-volume"></i><span id="text">Contact
+                    Us</span></button>
+            <button class="active" id="btn6"><i class="fa-solid fa-arrow-right-from-bracket"></i><span
+                    id="text">Logout</span></button>
+
 
 
 
@@ -78,11 +80,11 @@
     <Script>
 
 
-/*fetch method is working but the js file loading have an issue(it can be fix through the below code) and while 
-loading page having an issue and validating a page after the js file not closing so another side js file connot access
- the current page js file so this method having a trobule it's an advance method.for an alternative method is used */
+        /*fetch method is working but the js file loading have an issue(it can be fix through the below code) and while 
+        loading page having an issue and validating a page after the js file not closing so another side js file connot access
+         the current page js file so this method having a trobule it's an advance method.for an alternative method is used */
 
- 
+
         var page = "";
         const button = document.getElementById('btn');
         const box = document.getElementById('pagebody');
@@ -92,6 +94,7 @@ loading page having an issue and validating a page after the js file not closing
         const button4 = document.getElementById('btn4');
 
         const button5 = document.getElementById('btn5');
+        const button6 = document.getElementById('btn6');
 
 
         //page load time display page
@@ -99,8 +102,8 @@ loading page having an issue and validating a page after the js file not closing
         // loadPage();
 
         //close the menu bar after button clicked
-         document.getElementById("check").checked = false;
-        box.innerHTML='<Object width="100%" height="100%" type="text/html" data="adminHome.html"></Object>';
+        document.getElementById("check").checked = false;
+        box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="adminHome.html"></Object>';
 
         // load dashbaord
         button.addEventListener('click', () => {
@@ -108,9 +111,9 @@ loading page having an issue and validating a page after the js file not closing
             // loadPage();
 
             //close the menu bar after button clicked
-             document.getElementById("check").checked = false;
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="adminHome.html"></Object>';
-            
+            document.getElementById("check").checked = false;
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="adminHome.html"></Object>';
+
         });
 
 
@@ -127,7 +130,7 @@ loading page having an issue and validating a page after the js file not closing
             // scriptelement.id = 'currentscript';
             // scriptelement.src = 'profilevalidation.js';
             // document.head.appendChild(scriptelement);
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="adminprofile.php"></Object>';
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="adminprofile.php"></Object>';
         });
 
 
@@ -139,14 +142,14 @@ loading page having an issue and validating a page after the js file not closing
             // loadPage();
 
             //close the menu bar after button clicked
-             document.getElementById("check").checked = false;
+            document.getElementById("check").checked = false;
 
             //load the script
             // var scriptelement = document.createElement('script');
             // scriptelement.id = 'currentscript';
             // scriptelement.src = 'admindesign.js';
             // document.head.appendChild(scriptelement);
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="admindesign.php"></Object>';
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="admindesign.php"></Object>';
         });
 
         // load payments
@@ -155,7 +158,7 @@ loading page having an issue and validating a page after the js file not closing
             // loadPage();
 
             //close the menu bar after button clicked
-             document.getElementById("check").checked = false;
+            document.getElementById("check").checked = false;
 
             //load the script
             // var scriptelement = document.createElement('script');
@@ -163,7 +166,7 @@ loading page having an issue and validating a page after the js file not closing
             // scriptelement.src = 'adminpayment.js';
             // document.head.appendChild(scriptelement);
 
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="adminpayment.php"></Object>';
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="adminpayment.php"></Object>';
         });
 
         // load customer
@@ -172,7 +175,7 @@ loading page having an issue and validating a page after the js file not closing
             // loadPage();
 
             //close the menu bar after button clicked
-         document.getElementById("check").checked = false;
+            document.getElementById("check").checked = false;
 
 
             //load the script
@@ -180,7 +183,7 @@ loading page having an issue and validating a page after the js file not closing
             // scriptelement.id = 'currentscript';
             // scriptelement.src = 'admincustomervalid.js';
             // document.head.appendChild(scriptelement);
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="admincustomer.php"></Object>';
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="admincustomer.php"></Object>';
         });
 
 
@@ -188,10 +191,14 @@ loading page having an issue and validating a page after the js file not closing
         button5.addEventListener('click', () => {
             // page = 'admincontactus.html';
             // loadPage();
-            
+
             //close the menu bar after button clicked
             document.getElementById("check").checked = false;
-            box.innerHTML='<Object width="100%" height="100%" type="text/html" data="admincontactus.html"></Object>';
+            box.innerHTML = '<Object width="100%" height="100%" type="text/html" data="admincontactus.html"></Object>';
+        });
+        //logout
+        button6.addEventListener('click', () => {
+            window.location.href="indexlogin.php";
         });
 
         // function loadPage() {

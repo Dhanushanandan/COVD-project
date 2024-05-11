@@ -182,7 +182,7 @@ body{
 }
 #serheading{
     position: relative;
-    left: 10vw;
+    left: 8vw;
     font-size: 5vw;
 }
 #list{
@@ -219,10 +219,10 @@ body{
 .pimg{
     height: 45vh;
     width: 40vw;
-    background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
+    background-image: url(Image/technology-in-construction-image-800x445.jpeg);
     background-size: 100% 100%;
     box-shadow: var(--black) 10px 10px 24px;
-    animation:changeImage 10s infinite;
+    animation:changeImage 20s infinite;
     margin-left: 50px;
    /* border: 2px solid var(--black);*/
 }
@@ -318,6 +318,7 @@ body{
     flex:1;
     margin-top: 20vh;
     border-radius: 50px;
+    animation:changeImage 20s infinite;
 }
 .touch{
     animation: fade linear both;
@@ -410,17 +411,6 @@ body{
 
 .show-btn{
     cursor: pointer;
-}
-#show:checked ~ .contain{
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* position: fixed; */
-    display: block;
-    /* linear-gradient(rgba(0,0,0,.7),rgba(7, 7, 7, 0.2)) */
-}
-
-input[type="checkbox"]{
-    display: none;
 }
 
 #logincontainer h1{
@@ -739,19 +729,29 @@ input[type="checkbox"]{
 /* Image slider animation */
 @keyframes changeImage{
     0%{
-        background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
+        background: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
+        background-size: cover;
+        background-position: center;
     }
     25%{
-        background-image: url(Image/628268cc7d20506f6307dab83f843b97.jpg);
+        background: url(Image/628268cc7d20506f6307dab83f843b97.jpg);
+        background-size: cover;
+        background-position: center;
     }
     50%{
-        background-image: url(Image/195869-nomryjdgor-1699964440.jpg);
+        background: url(Image/195869-nomryjdgor-1699964440.jpg);
+        background-size: cover;
+        background-position: center;
     }
     75%{
-        background-image: url(Image/628268cc7d20506f6307dab83f843b97.jpg);
+        background: url(Image/628268cc7d20506f6307dab83f843b97.jpg);
+        background-size: cover;
+        background-position: center;
     }
     100%{
-        background-image: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
+        background: url(Image/technology-in-construction-image-800x445.jpeg.jpg);
+        background-size: cover;
+        background-position: center;
     }
 }
 /* website scroll fade */
@@ -775,6 +775,7 @@ input[type="checkbox"]{
         animation-timeline: view();
         animation-range: entry 50% cover 50%;
         border-radius: 50px;
+    /* animation:changeImage 20s infinite; */
     }
     #pimg{
         flex: 100%;
@@ -786,6 +787,7 @@ input[type="checkbox"]{
         animation-timeline: view();
         animation-range: entry 75% cover 50%;
         border-radius: 50px;
+    animation:changeImage 20s infinite;
     }
     #price{
         flex: 100%;
@@ -866,3 +868,65 @@ input[type="checkbox"]{
     border-color:2px solid red;
     background: transparent;
 } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* final Media queries for mobile devices */
+@media screen and (max-width: 767px) {
+    #clogo {
+        height: 6vh;
+        width: 10vw;
+        margin-top: 10px;
+    }
+    #companyname {
+        font-size: 6vw;
+        padding-top: 0px;
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    #res {
+        font-size: 15px;
+        padding-right: 20px;
+        padding-top: 10px;
+        text-align: right;
+        margin-right: 150px;
+    }
+    
+   #heading,#history{
+    margin-right: 90px;
+   }
+   #para1{
+    margin-right: 40px;
+   }
+   .img{
+    margin-left: 0;
+   }
+   #pimg{
+    margin-left: -100px;
+   }
+   #contact{
+    margin-right: 160px;
+   }
+   #touch{
+    margin-right: 100px;
+   }
+   
+}

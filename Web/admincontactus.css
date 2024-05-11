@@ -25,6 +25,7 @@ body {
     color: var(--black);
     background: var(--whitesmoke);
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #clogo {
@@ -130,6 +131,7 @@ body {
 
 /* contact stylings */
 .main {
+     overflow-y: hidden;
     width: 100%;
     height: 86vh;
     display: flex;
@@ -140,6 +142,7 @@ body {
 }
 
 .contact{
+    overflow-y: hidden;
     flex: 1;
     display: grid;
     align-content: center;
@@ -163,4 +166,50 @@ body {
     /* box-shadow: 0 0 15px var(--red); */
     text-shadow: 0 0 20px var(--white),
     0 0 50px var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries for mobile devices */
+@media screen and (max-width: 767px) {
+    #clogo {
+        height: 6vh;
+        width: 10vw;
+        margin-top: 10px;
+    }
+    #companyname {
+        font-size: 6vw;
+        padding-top: 0px;
+        margin-left: 0px;
+        margin-top: 15px;
+    }
+    #res {
+        font-size: 15px;
+        padding-right: 20px;
+        padding-top: 10px;
+        text-align: right;
+        margin-right: 150px;
+    }
+    .main{
+        height: 100vh;
+    }
+    .contact{
+        display: grid;
+        align-content: center;
+        text-align: center;
+        font-size: 3vw;
+        color: var(--white);
+        font-weight: bolder;
+        margin-left: -35px;
+    }
+
 }
