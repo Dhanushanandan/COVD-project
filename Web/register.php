@@ -171,6 +171,7 @@ if (isset($_POST["loginbutton"])) {
         $result2 = mysqli_query($con, $sql2);
         if (mysqli_num_rows($result2) > 0) {
             //check for admin account
+            //using admin type variable declared above as $user
             $sql3 = "SELECT * from Customer_details Where email='$email' AND pass='$password' AND status=1 AND user='$user'";
             $result3 = mysqli_query($con, $sql3);
             if (mysqli_num_rows($result3) > 0) {
